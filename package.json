@@ -1,6 +1,6 @@
 {
   "name": "neurons.me",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Shared dependencies for neurons.me - Working towards first stable version on July 15 2023.",
   "main": "index.js",
   "scripts": {
@@ -13,17 +13,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/suiGn/neurons.me"
+    "url": "https://github.com/neurons-me/neurons.me"
   },
   "bugs": {
-    "url": "https://github.com/suiGn/neurons.me/issues"
+    "url": "https://github.com/neurons-me/neurons.me/issues"
   },
-  "homepage": "https://github.com/suiGn/neurons.me/issues#readme",
+  "homepage": "https://github.com/neurons-me/neurons.me/issues#readme",
   "dependencies": {
-    "netget": "https://github.com/suiGn/netget",
-    "mLearning": "https://github.com/suiGn/mLearning",
-    "monads": "https://github.com/suiGn/Monads",
-    "theVault": "https://github.com/suiGn/theVault",
-    "cleaker": "https://github.com/suiGn/cleaker"
+    "netget": "https://github.com/your-username/netget.git"
   }
 }
