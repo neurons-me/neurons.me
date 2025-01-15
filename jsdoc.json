@@ -1,0 +1,51 @@
+{
+  "source": {
+    "include": ["./src", "./index.js", "./README.md"]
+  },
+  "opts": {
+    "destination": "./docs",
+    "template": "../../../../../../Sandbox/dev_tools/assets/better-docs",
+    "readme": "./README.md"
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "search": true,
+    "default": {
+        "staticFiles": {
+          "include": [
+              "./README.md"
+          ]
+        }
+    },
+    "better-docs": {
+        "name": "docs.neurons.me",
+        "title": "docs.neurons.me", 
+        "css": "style.css",
+        "trackingCode": "-",
+  "hideGenerator": false,
+  "navLinks": [
+    {
+      "label": "All.This",
+      "href": "https://suign.github.io/all.this/"
+  },
+  {
+    "label": "@Source",
+    "href": "https://suign.github.io/"
+},
+      {
+          "label": "Github",
+          "href": "https://github.com/suiGn/cleaker"
+      },
+      {
+          "label": "Cleaker.me",
+          "href": "https://cleaker.me"
+      },
+      {
+        "label": "What is all.this?",
+          "href": "https://www.neurons.me/all-this"
+      }
+  ]
+}
+}
+}
