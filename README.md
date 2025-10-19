@@ -20,3 +20,6 @@
 
 
 
+[![PyPI version](https://badge.fury.io/py/neurons-me.svg)](https://pypi.org/project/neurons-me/)
+[![Crates.io version](https://img.shields.io/crates/v/neurons-me.svg)](https://crates.io/crates/neurons-me)
+[![npm version](https://badge.fury.io/js/neurons-me.svg)](https://www.npmjs.com/package/neurons-me)
