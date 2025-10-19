@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://www.neurons.me/media/neurons-grey.png" width="21%" />
+  <img src="https://www.neurons.me/neurons.me.png" width="21%" />
 </p>
+
 
 <p align="center">
   <a href="https://pypi.org/project/neurons-me/">
