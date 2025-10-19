@@ -9,7 +9,7 @@ repository = "https://github.com/neurons-me/neurons.me"
 homepage = "https://neurons.me"
 readme = "README.md"
 keywords = ["neurons", "daemon", "modular", "deepLearning", "decentralized"]
-categories = ["network-programming", "command-line-utilities", "deep-learning"]
+categories = ["network-programming", "command-line-utilities"]
 exclude = ["target/*", ".gitignore", ".vscode/*"]
 [dependencies]
 tokio = { version = "1", features = ["full"] }
