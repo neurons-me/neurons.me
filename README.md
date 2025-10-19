@@ -6,7 +6,7 @@
 
 
 <p align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTygIAHpd-8wF2kJJNUvFqjhwpA_JKUFfKTHg&s" width="16%" />
+  <img src="https://styles.redditmedia.com/t5_35v9f/styles/communityIcon_vdanguoy08f11.png" width="16%" />
 </p>
 
 <p align="center">
