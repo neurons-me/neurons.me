@@ -2,6 +2,8 @@
 
 # **neurons.me**
 
+###### Go Algorithmic.
+
 This crate provides the **Rust core** for the **neurons.me** platform — a modular deep learning and neural computation ecosystem.  
 It includes background services and computation engines responsible for training, inference, and distributed processing across the neurons.me network.
 
