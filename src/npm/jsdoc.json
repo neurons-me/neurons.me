@@ -1,0 +1,47 @@
+{
+  "source": {
+    "include": [
+      "./src",
+      "./index.js",
+      "./README.md"
+    ]
+  },
+  "opts": {
+    "destination": "/mnt/neuroverse/https-neurons/subDomains/docs/public/neurons.me",
+    "template": "/mnt/neuroverse/Sandbox/better-docs/",
+    "readme": "./README.md"
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "search": true,
+    "default": {
+      "staticFiles": {
+        "include": [
+          "./README.md"
+        ]
+      }
+    },
+    "better-docs": {
+      "name": "docs.neurons.me",
+      "title": "docs.neurons.me",
+      "css": "style.css",
+      "trackingCode": "-",
+      "hideGenerator": false,
+      "navLinks": [
+        {
+          "label": "All.This",
+          "href": "https://docs.neurons.me/all.this/"
+        },
+        {
+          "label": "Neurons.me",
+          "href": "https://neurons.me"
+        },
+        {
+          "label": "Github",
+          "href": "https://github.com/neurons-me/be.this"
+        }
+      ]
+    }
+  }
+}

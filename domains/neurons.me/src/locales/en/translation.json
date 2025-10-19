@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "title": "neurons.me",
+    "subtitle": "Go Algorithmic",
+    "explore": "Explore"
+  },
+  "ecosystem": {
+    "title": "The Ecosystem",
+    "paragraph": "neurons.me lets you actively build and control the intelligence that works for you."
+  },
+  "cta": {
+    "gettingStarted": "Getting Started",
+    "whatIsAllThis": "What is All.This?",
+    "docs": "Docs"
+  },
+  "apps": {
+    "title": "Discover",
+    "description1": "Everyday applications."
+  },
+  "businessHub": {
+    "title": "Business Hub",
+    "services": "Services",
+    "line1": "Custom AI solutions.",
+    "line2": "Blockchain.",
+    "line3": "Web and App Development.",
+    "line4": "E-Commerce.",
+    "scheduleCall": "Schedule a Call."
+  },
+  "blog": {
+    "title": "Blog",
+    "description2": "From computational philosophy to practical implementations."
+  },
+  "footer": {
+  "terms": "Terms of Use",
+  "privacy": "Privacy Policy"
+}
+}

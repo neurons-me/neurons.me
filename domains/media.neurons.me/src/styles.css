@@ -1,0 +1,14 @@
+/* Ensure html and body take up the full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Allow scrolling */
+}
+
+/* Ensure the root div spans the full viewport height */
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "neurons.me",
+    "subtitle": "Sé  Algorítmico",
+    "explore": "Explorar"
+  },
+  "ecosystem": {
+    "title": "El Ecosistema",
+    "paragraph": "neurons.me es un entorno que te permite construir y controlar activamente una inteligencia que trabaje para ti."
+  },
+  "cta": {
+    "gettingStarted": "Empezar",
+    "whatIsAllThis": "¿Qué es All.This?",
+    "docs": "Documentación"
+  },
+  "apps": {
+    "title": "Descubre",
+    "description1": "Aplicaciones para la vida cotidiana."
+  },
+  "serviceHub": {
+    "title": "Business Hub",
+    "services": "Servicios",
+    "line1": "Soluciones personalizadas en IA.",
+    "line2": "Blockchain.",
+    "line3": "Desarrollo Web y de Aplicaciones.",
+    "line4": "E-Commerce.",
+    "scheduleCall": "Agenda una llamada."
+  },
+  "blog": {
+    "title": "Blog",
+    "description1": "Ideas, proyectos y pensamientos de neurons.me",
+    "description2": "Desde filosofía computacional hasta implementaciones prácticas."
+  },
+  "footer": {
+  "terms": "Términos de Uso",
+  "privacy": "Política de Privacidad"
+}
+}
