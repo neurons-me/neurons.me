@@ -1,3 +1,7 @@
 [submodule "src/neurons.npm"]
 	path = src/neurons.npm
 	url = https://github.com/neurons-me/neurons.npm.git
+
+[submodule "src/neurons.crate"]
+	path = src/neurons.crate
+	url = https://github.com/neurons-me/neurons.crate.git
