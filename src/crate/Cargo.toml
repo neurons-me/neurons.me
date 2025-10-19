@@ -1,6 +1,6 @@
 [package]
 name = "neurons-me"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["suiGn <info@neurons.me>"]
 description = "Neurons.me Rust Ecosystem – enabling deep learning processes and modular neural computation."

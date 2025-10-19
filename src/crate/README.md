@@ -1,4 +1,4 @@
-<img src="https://res.cloudinary.com/dkwnxf6gm/image/upload/v1760893910/neurons-me-rust-crate_3b73fa.jpg" alt="neurons.me logo" width="221" height="203">
+<img src="https://res.cloudinary.com/dkwnxf6gm/image/upload/v1760894993/neurons-crates-io-no-background_yfxaer.png" alt="neurons.me logo" width="221" height="203">
 
 # **neurons.me**
 
