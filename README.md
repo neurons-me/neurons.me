@@ -1,4 +1,6 @@
-**nodejs::rust::python** - **npm::crate.io::pip**
+[![PyPI version](https://badge.fury.io/py/neurons-me.svg)](https://pypi.org/project/neurons-me/)
+[![Crates.io version](https://img.shields.io/crates/v/neurons-me.svg)](https://crates.io/crates/neurons-me)
+[![npm version](https://badge.fury.io/js/neurons-me.svg)](https://www.npmjs.com/package/neurons-me)
 
 <p align="center">
   <img src="https://www.neurons.me/media/neurons-grey.png" width="21%" />
@@ -17,9 +19,3 @@
   <img src="https://pypi.org/static/images/logo-small.8998e9d1.svg" width="16%" />
 </p>
 
-
-
-
-[![PyPI version](https://badge.fury.io/py/neurons-me.svg)](https://pypi.org/project/neurons-me/)
-[![Crates.io version](https://img.shields.io/crates/v/neurons-me.svg)](https://crates.io/crates/neurons-me)
-[![npm version](https://badge.fury.io/js/neurons-me.svg)](https://www.npmjs.com/package/neurons-me)
