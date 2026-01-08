@@ -3,6 +3,7 @@
 </p>
 
 # neurons.me
+[neurons.me](https://neurons-me.github.io/)
 MIT License
 Copyright (c) 2025
 [suiGn](https://suign.github.io/)
