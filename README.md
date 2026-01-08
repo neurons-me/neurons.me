@@ -1,16 +1,10 @@
-<p align="center">
-  <img src="https://www.neurons.me/neurons.me.png" width="21%" />
-</p>
+<img src="https://res.cloudinary.com/dkwnxf6gm/image/upload/v1760629064/neurons.me_b50f6a.png" alt="https://res.cloudinary.com/dkwnxf6gm/image/upload/v1760629064/neurons.me_b50f6a.png" style="zoom:55%;" />
 
+# neurons.me
 
-<p align="center">
-  <a href="https://pypi.org/project/neurons-me/">
-    <img src="https://badge.fury.io/py/neurons-me.svg" alt="PyPI version">
-  </a>
-  <a href="https://crates.io/crates/neurons-me">
-    <img src="https://img.shields.io/crates/v/neurons-me.svg" alt="Crates.io version">
-  </a>
-  <a href="https://www.npmjs.com/package/neurons-me">
-    <img src="https://badge.fury.io/js/neurons-me.svg" alt="npm version">
-  </a>
-</p>
+MIT License
+
+Copyright (c) 2025 [neurons.me](https://neurons.me)
+
+[abella.e](https://www.abellae.me/)/[suiGn](https://suign.github.io/)
+

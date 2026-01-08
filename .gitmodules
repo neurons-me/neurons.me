@@ -1,11 +1,9 @@
-[submodule "src/npm.neurons"]
-	path = src/npm.neurons
+[submodule "modules/npm.neurons"]
+	path = modules/npm.neurons
 	url = https://github.com/neurons-me/npm.neurons.git
-
-[submodule "src/crate.neurons"]
-	path = src/crate.neurons
+[submodule "modules/crate.neurons"]
+	path = modules/crate.neurons
 	url = https://github.com/neurons-me/crate.neurons.git
-
-[submodule "src/pip.neurons"]
-	path = src/pip.neurons
+[submodule "modules/pip.neurons"]
+	path = modules/pip.neurons
 	url = https://github.com/neurons-me/pip.neurons.git

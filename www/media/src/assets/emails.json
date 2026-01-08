@@ -81,7 +81,8 @@
     "deviantart": { "username": null, "name": null, "lastname": null },
     "flickr": { "username": "sui.gn", "name": "Sui", "lastname": "Gn", "url": "https://www.flickr.com/photos/suign/" },
     "cloudinary": { "username": null, "name": "Sui", "lastname": "Gn", "url": null },
-    "tiktok": { "username": null, "name": null, "lastname": null }
+    "tiktok": { "username": null, "name": null, "lastname": null },
+    "dev.to": { "username": "suign", "name": "Sui Gn", "lastname": null, "url": "https://dev.to/suign" }
   },
   {
     "email": "social@orgboat.com",
@@ -385,6 +386,29 @@
     "deviantart": { "username": null, "name": null, "lastname": null },
     "flickr": { "username": null, "name": null, "lastname": null },
     "tiktok": { "username": null, "name": null, "lastname": null }
+  },
+   {
+    "email": "jabellae@rafagas.com.mx",
+    "name": "Jabellae Rafagas",
+    "facebook": { "username": null, "name": null, "lastname": null },
+    "linkedin": { "username": null, "name": null, "lastname": null },
+    "instagram": { "username": null, "name": null, "lastname": null },
+    "twitter": { "username": null, "name": null, "lastname": null },
+    "notes": "Transportes y Logística.",
+    "x": { "username": null, "name": null, "lastname": null },
+    "product_hunt": { "username": null, "name": null, "lastname": null },
+    "indiehackers": { "username": null, "name": null, "lastname": null },
+    "crunchbase": { "username": null, "name": null, "lastname": null },
+    "angel_list": { "username": null, "name": null, "lastname": null },
+    "github": { "username": null, "name": null, "lastname": null },
+    "npm": { "username": null, "name": null, "lastname": null },
+    "google_my_business": { "username": null, "name": null, "lastname": null },
+    "behance": { "username": null, "name": null, "lastname": null },
+    "dribbble": { "username": null, "name": null, "lastname": null },
+    "medium": { "username": null, "name": null, "lastname": null },
+    "quora": { "username": null, "name": null, "lastname": null },
+    "reddit": { "username": null, "name": null, "lastname": null },
+    "flickr": { "username": null, "name": null, "lastname": null }
   },
    {
     "email": "jabellae@rafagas.com.mx",
