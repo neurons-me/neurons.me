@@ -1,9 +1,14 @@
-[submodule "modules/npm.neurons"]
-	path = modules/npm.neurons
-	url = https://github.com/neurons-me/npm.neurons.git
-[submodule "modules/crate.neurons"]
-	path = modules/crate.neurons
-	url = https://github.com/neurons-me/crate.neurons.git
-[submodule "modules/pip.neurons"]
-	path = modules/pip.neurons
-	url = https://github.com/neurons-me/pip.neurons.git
+[submodule "this/.me"]
+	path = this/.me
+	url = https://github.com/neurons-me/.me.git
+[submodule "this/GUI"]
+	path = this/GUI
+	url = https://github.com/neurons-me/GUI.git
+
+[submodule "domains/neurons-me.github.io"]
+	path = domains/neurons-me.github.io
+	url = https://github.com/neurons-me/neurons-me.github.io.git
+
+[submodule "core/cleaker"]
+	path = core/cleaker
+	url = https://github.com/neurons-me/cleaker.git
