@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetGet Documentation modules/NetGetX/config/i_DefaultNetGetX.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">NetGet</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/all.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-NetGetX.html">NetGetX</a></li><li><a href="module-PortManagement.html">PortManagement</a></li><li><a href="module-Srvrs_CLI.html">Srvrs_CLI</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-NetGetX.Config.html">Config</a></li><li><a href="module-NetGetX.Domains.html">Domains</a></li><li><a href="module-NetGetX.NginxConfiguration.html">NginxConfiguration</a></li><li><a href="module-NetGetX.OpenResty.html">OpenResty</a></li><li><a href="module-NetGetX.SSL.html">SSL</a></li><li><a href="module-NetGetX.Utils.html">Utils</a></li></ul><h3>Classes</h3><ul><li><a href="NetGet.html">NetGet</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAndSetFilePermissions">checkAndSetFilePermissions</a></li><li><a href="global.html#checkPermissions">checkPermissions</a></li><li><a href="global.html#displayManualInstructions">displayManualInstructions</a></li><li><a href="global.html#domainsTable">domainsTable</a></li><li><a href="global.html#ensureDirectoryExists">ensureDirectoryExists</a></li><li><a href="global.html#execShellCommand">execShellCommand</a></li><li><a href="global.html#getDirectoryPaths">getDirectoryPaths</a></li><li><a href="global.html#getDomainsFromDB">getDomainsFromDB</a></li><li><a href="global.html#getLocalIP">getLocalIP</a></li><li><a href="global.html#getPublicIP">getPublicIP</a></li><li><a href="global.html#getState">getState</a></li><li><a href="global.html#handlePermission">handlePermission</a></li><li><a href="global.html#handlePermissionErrorForEnsureDir">handlePermissionErrorForEnsureDir</a></li><li><a href="global.html#initializeDirectories">initializeDirectories</a></li><li><a href="global.html#initializeState">initializeState</a></li><li><a href="global.html#pathExists">pathExists</a></li><li><a href="global.html#promptForDomainAndEmail">promptForDomainAndEmail</a></li><li><a href="global.html#retrieveSubdomainsTable">retrieveSubdomainsTable</a></li><li><a href="global.html#tryElevatedPrivileges">tryElevatedPrivileges</a></li><li><a href="global.html#updateState">updateState</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/NetGetX/config/i_DefaultNetGetX.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//i_DefaultNetGetX.js
+import chalk from 'chalk';
+import { loadOrCreateXConfig, saveXConfig } from './xConfig.js';
+import { initializeState } from '../xState.js';
+import { getLocalIP, getPublicIP } from '../../utils/ipUtils.js';
+import { pathExists } from '../../utils/pathUtils.js';
+import { initializeDirectories, getDirectoryPaths } from '../../utils/GETDirs.js';
+import { checkSelfSignedCertificates, generateSelfSignedCert } from '../Domains/SSL/selfSignedCertificates.js';
+import { checkLocalHostEntryExists, addLocalHostEntry } from '../../utils/localHosts.js';
+import verifyOpenRestyInstallation from '../OpenResty/verifyOpenRestyInstallation.js';
+import openRestyInstallationOptions from '../OpenResty/openRestyInstallationOptions.cli.js';
+import { ensureNginxConfigFile, setNginxConfigFile } from '../OpenResty/setNginxConfigFile.js';
+
+/**
+ * Sets default paths for NGINX and other directories if they are not already set.
+ * @memberof module:NetGetX.Config
+ * @returns {Promise&lt;Object>} The updated user configuration object.
+ */
+async function i_DefaultNetGetX() {
+    initializeDirectories(); // Initialize all necessary directories
+    let DEFAULT_DIRECTORIES = getDirectoryPaths(); // Get paths to .get default directories
+    let xConfig = await loadOrCreateXConfig();
+
+    const entry = '127.0.0.1 local.netget';
+    if (!checkLocalHostEntryExists(entry)) {
+        console.log(chalk.blue(`Entry does not exist, adding: ${entry}`));
+        await addLocalHostEntry(entry);
+    }
+
+    console.log(`Host: ${chalk.blue(entry)}`);
+
+    // Self-signed certificates validation
+    const getSelfSignedCertificates = await checkSelfSignedCertificates();
+    if (!getSelfSignedCertificates) {
+        console.log(chalk.blue('Self-signed certificates not found, generating new ones.'));
+        await generateSelfSignedCert();
+    } else {
+        console.log(chalk.blue('Self-signed certificates already exist.'));
+        console.log(' ');
+    }
+
+    // OpenResty installation validation
+    let openRestyInstalled = verifyOpenRestyInstallation();
+    if (!openRestyInstalled) {
+        console.log(chalk.yellow("OpenResty is not installed. Redirecting to installation options..."));
+        await openRestyInstallationOptions();
+        openRestyInstalled = verifyOpenRestyInstallation();
+        if (!openRestyInstalled) {
+            console.log(chalk.red("OpenResty still not detected after installation attempt. Please manually install OpenResty and retry."));
+            return false;
+        } else {
+            console.log(chalk.green("OpenResty installed successfully."));
+        }
+    }
+
+    const validateNginxConfig = () => {
+        if (fs.existsSync(nginxConfigPath)) {
+            const existingContent = fs.readFileSync(nginxConfigPath, 'utf8');
+            return existingContent === nginxConfigContent;
+        }
+        return false;
+    };
+
+    // NGINX configuration file validation
+    const nginxConfigPath = '/usr/local/openresty/nginx/conf/nginx.conf';
+    if (!pathExists(nginxConfigPath)) {
+        await ensureNginxConfigFile();
+        if (!pathExists(nginxConfigPath) &amp; validateNginxConfig()) {
+            await setNginxConfigFile();
+            xConfig = await loadOrCreateXConfig(); // Reload to ensure all config updates are reflected
+        } else {
+            await ensureNginxConfigFile();
+        }
+    }
+
+    /*
+     ┏┓┏┓┏┳┓
+     ┃┓┣  ┃ 
+    •┗┛┗┛ ┻ 
+    Verify .get Paths  
+     */
+    if (!xConfig.getPath) {
+        const getDefaultPath = DEFAULT_DIRECTORIES.getPath;
+        if (pathExists(getDefaultPath)) {
+            await saveXConfig({ getPath: getDefaultPath });
+            xConfig = await loadOrCreateXConfig(); // Reload to ensure all config updates are reflected
+        } else {
+            console.log(`Default getPath does not exist: ${getDefaultPath}, not updating configuration.`);
+        }
+    }
+
+    if (!xConfig.static) {
+        const getDefaultStatic = DEFAULT_DIRECTORIES.static;
+        if (pathExists(getDefaultStatic)) {
+            await saveXConfig({ static: getDefaultStatic });
+            xConfig = await loadOrCreateXConfig(); // Reload to ensure all config updates are reflected
+        } else {
+            console.log(`Default static does not exist: ${getDefaultStatic}, not updating configuration.`);
+        }
+    }
+
+
+    if (!xConfig.devPath) {
+        const getDefaultDevPath = DEFAULT_DIRECTORIES.devPath;
+        if (pathExists(getDefaultDevPath)) {
+            //console.log(`Default devPath exists: ${getDefaultDevPath}`);
+            await saveXConfig({ devPath: getDefaultDevPath });
+            xConfig = await loadOrCreateXConfig(); // Reload to ensure all config updates are reflected
+            //console.log(`devPath updated in configuration.`);
+        } else {
+            console.log(`Default devPath does not exist: ${getDefaultDevPath}, not updating configuration.`);
+        }
+    }
+
+    if (!xConfig.devStatic) {
+        const getDefaultDevStatic = DEFAULT_DIRECTORIES.devStatic;
+        if (pathExists(getDefaultDevStatic)) {
+            await saveXConfig({ devStatic: getDefaultDevStatic });
+            xConfig = await loadOrCreateXConfig(); // Reload to ensure all config updates are reflected
+        } else {
+            console.log(`Default devStatic does not exist: ${getDefaultDevStatic}, not updating configuration.`);
+        }
+    }
+
+    /*
+    ╔═╗╔═╗╦═╗╔╦╗╔═╗
+    ╠═╝║ ║╠╦╝ ║ ╚═╗
+    ╩  ╚═╝╩╚═ ╩ ╚═╝*/
+    if (!xConfig.xMainOutPutPort) {
+        await saveXConfig({ xMainOutPutPort: 3432 });
+        xConfig = await loadOrCreateXConfig(); // Reload to ensure all config updates are reflected
+    }
+
+    const publicIP = await getPublicIP();  // Properly await the asynchronous call
+    const localIP = getLocalIP();
+    if (publicIP != xConfig.publicIP) {
+        console.log("PublicIP has changed from: " + xConfig.publicIP + " new Detected: " + publicIP);
+        await saveXConfig({ publicIP: publicIP });
+        xConfig = await loadOrCreateXConfig(); // Reload to ensure all config updates are reflected
+    };
+
+    if (localIP != xConfig.localIP) {
+        console.log("LocalIP has changed from: " + xConfig.localIP + " new Detected: " + localIP);
+        await saveXConfig({ localIP: localIP });
+        xConfig = await loadOrCreateXConfig(); // Reload to ensure all config updates are reflected
+    };
+
+    let x = {
+        ...xConfig // spreads all properties of xConfig into x
+    };
+
+    initializeState(x);
+    return x;
+};
+
+export { i_DefaultNetGetX };</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

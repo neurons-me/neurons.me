@@ -1,0 +1,237 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>this.me Docs modules/relationships.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">this.me</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/this.me"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="a.module_%2520Identity.html"> Identity</a></li><li><a href="module-Attributes.html">Attributes</a></li><li><a href="module-Properties.html">Properties</a></li><li><a href="module-Reactions.html">Reactions</a></li><li><a href="module-Relationships.html">Relationships</a></li></ul><h3>Classes</h3><ul><li><a href="Me.html">Me</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>modules/relationships.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module Relationships
+ * @description Methods to manage relationships for the `Me` class, with enforced relationship types and validation.
+ */
+
+// Define the allowed relationship types
+const RELATIONSHIP_TYPES = [
+  "friend", // Close personal connection
+  "colleague", // Professional connection
+  "family", // Familial connection
+  "follower", // One-way follower (social media-like)
+  "blocked", // Blocked user
+  "group" // A group of related users
+];
+
+/**
+ * Add a relationship to the `me` instance.
+ * Enforces relationship types and allows additional metadata for extensibility.
+ *
+ * @function
+ * @param {Array} relationships - The relationships array to update.
+ * @param {Object} relationship - The relationship to add.
+ * @param {string} relationship.type - The type of relationship (e.g., "friend", "colleague").
+ * @param {string} relationship.username - The username of the related entity.
+ * @param {Object} [relationship.meta] - Additional metadata for the relationship (optional).
+ * @throws {Error} If the relationship type or username is invalid.
+ * 
+ * @example
+ * // Adding a friend
+ * addRelationship(relationships, { type: "friend", username: "alice" });
+ * 
+ * // Adding a group with metadata
+ * addRelationship(relationships, { 
+ *   type: "group", 
+ *   username: "FamilyGroup", 
+ *   meta: { members: ["alice", "bob"] } 
+ * });
+ */
+export function addRelationship(relationships, { type, username, meta }) {
+  if (!RELATIONSHIP_TYPES.includes(type)) {
+    throw new Error(
+      `Invalid relationship type: "${type}". Allowed types are: ${RELATIONSHIP_TYPES.join(", ")}`
+    );
+  }
+
+  if (!username || typeof username !== "string") {
+    throw new Error("Invalid or missing username for the relationship.");
+  }
+
+  // Push the validated relationship into the array
+  relationships.push({ type, username, meta: meta || {} });
+}
+
+/**
+ * Retrieve all relationships for the `me` instance, optionally filtered by type.
+ *
+ * @function
+ * @param {Array} relationships - The relationships array to retrieve from.
+ * @param {string} [type] - The type of relationship to filter by (e.g., "friend", "family").
+ * @returns {Array} The filtered or full relationships array.
+ * 
+ * @example
+ * // Get all relationships
+ * getRelationships(relationships);
+ * 
+ * // Get only friends
+ * getRelationships(relationships, "friend");
+ */
+export function getRelationships(relationships, type = null) {
+  if (type) {
+    return relationships.filter((rel) => rel.type === type);
+  }
+  return relationships;
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

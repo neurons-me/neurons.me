@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cleaker Global</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Cleaker</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/be.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-Index.html">Index</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generatePassword">generatePassword</a></li><li><a href="global.html#hashPassword">hashPassword</a></li><li><a href="global.html#me">me</a></li><li><a href="global.html#passwordSecurityCheck">passwordSecurityCheck</a></li><li><a href="global.html#randomToken">randomToken</a></li><li><a href="global.html#salt">salt</a></li><li><a href="global.html#validateEmail">validateEmail</a></li><li><a href="global.html#validateUsername">validateUsername</a></li><li><a href="global.html#verifyPassword">verifyPassword</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p></p>
+                    <h1>Global</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="generatePassword">
+        <a class="href-link" href="#generatePassword">#</a>
+        
+        <span class="code-name">
+            
+                generatePassword<span class="signature">(length<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Generates a strong password with a combination of letters, numbers, and symbols.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+            <th>Default</th>
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>length</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          12
+      
+      </td>
+  
+
+  <td class="description last">Length of the generated password.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_generatePassword.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_generatePassword.js.html">src/methods/generatePassword.js</a>, <a href="src_methods_generatePassword.js.html#line13">line 13</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>The generated password.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>import generatePassword from './generatePassword.js';
+
+const myPassword = generatePassword(16);
+console.log(myPassword); // Example output: 'aB3!xD@eFg#1$hIj'</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="hashPassword">
+        <a class="href-link" href="#hashPassword">#</a>
+        
+        <span class="code-name">
+            
+                hashPassword<span class="signature">(password, salt, iterations)</span><span class="type-signature"> &rarr; {Promise.&lt;string>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Hashes a password using a salt and a specified number of iterations.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>password</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The plain text password to hash.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>salt</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The salt value to use during hashing.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>iterations</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The number of hashing iterations.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_hashPassword.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_hashPassword.js.html">src/methods/hashPassword.js</a>, <a href="src_methods_hashPassword.js.html#line29">line 29</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'>If an error occurs during hashing.</div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>A promise that resolves to the hashed password as a hexadecimal string.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;string></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>import hashPassword from './hashPassword.js';
+
+async function example() {
+  const password = 'mypassword';
+  const salt = 'randomSaltValue';
+  const iterations = 1000;
+  try {
+    const hashedPassword = await hashPassword(password, salt, iterations);
+    console.log(hashedPassword); // Logs the hashed password
+  } catch (error) {
+    console.error('Error hashing password:', error.message);
+  }
+}
+
+example();</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="me">
+        <a class="href-link" href="#me">#</a>
+        
+        <span class="code-name">
+            
+                me<span class="signature">(options)</span><span class="type-signature"> &rarr; {function}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        .me: Handles identity logging and context establishment for space, user, and event requests.
+Logs the identity in the ledger on the provided port and v.path URL.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+            <th>Default</th>
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>options</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Object</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
+  
+
+  <td class="description last">Configuration options</td>
+</tr>
+
+  
+  
+    
+<tr class="deep-level-1">
+  
+      <td class="name"><code>ledger</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
+  
+
+  <td class="description last">The ledger API endpoint (v.path URL)</td>
+</tr>
+
+  
+    
+<tr class="deep-level-1">
+  
+      <td class="name"><code>jwtCookieName</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          'jwt'
+      
+      </td>
+  
+
+  <td class="description last">The name of the JWT cookie to use for user identity</td>
+</tr>
+
+  
+    
+<tr class="deep-level-1">
+  
+      <td class="name"><code>requireAuth</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">boolean</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
+  
+
+  <td class="description last">Set to true if user authentication is required</td>
+</tr>
+
+  
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_me.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_me.js.html">src/methods/me.js</a>, <a href="src_methods_me.js.html#line14">line 14</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Express middleware for handling space, request, and user identity.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">function</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="passwordSecurityCheck">
+        <a class="href-link" href="#passwordSecurityCheck">#</a>
+        
+        <span class="code-name">
+            
+                passwordSecurityCheck<span class="signature">(password)</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if a password meets basic security criteria.
+Criteria: At least 8 characters, includes uppercase, lowercase, number, and special character.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>password</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The password to check.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_passwordSecurityCheck.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_passwordSecurityCheck.js.html">src/methods/passwordSecurityCheck.js</a>, <a href="src_methods_passwordSecurityCheck.js.html#line14">line 14</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>True if the password is secure, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>import passwordSecurityCheck from './passwordSecurityCheck.js';
+
+const isSecure = passwordSecurityCheck('aB3!xD@e');
+console.log(isSecure); // Example output: true</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="randomToken">
+        <a class="href-link" href="#randomToken">#</a>
+        
+        <span class="code-name">
+            
+                randomToken<span class="signature">(length<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Generates a random token (e.g., for verification purposes).
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+            <th>Default</th>
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>length</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          20
+      
+      </td>
+  
+
+  <td class="description last">The length of the token in bytes.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_randomToken.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_randomToken.js.html">src/methods/randomToken.js</a>, <a href="src_methods_randomToken.js.html#line15">line 15</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>A randomly generated token in hexadecimal format.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>import randomToken from './randomToken.js';
+
+const token = randomToken(16);
+console.log(token); // Example output: '9f86d081884c7d659a2feaa0c55ad015'</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="salt">
+        <a class="href-link" href="#salt">#</a>
+        
+        <span class="code-name">
+            
+                salt<span class="signature">(length<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Generates a cryptographic salt for secure operations (e.g., password hashing).
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+            <th>Default</th>
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>length</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          16
+      
+      </td>
+  
+
+  <td class="description last">The desired length of the salt in bytes.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_salt.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_salt.js.html">src/methods/salt.js</a>, <a href="src_methods_salt.js.html#line15">line 15</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>A randomly generated salt in hexadecimal format.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>import salt from './salt.js';
+
+const mySalt = salt(16);
+console.log(mySalt); // Example output: 'e3b0c44298fc1c14'</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="validateEmail">
+        <a class="href-link" href="#validateEmail">#</a>
+        
+        <span class="code-name">
+            
+                validateEmail<span class="signature">(email)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Validates an email address to ensure it follows correct syntax.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>email</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The email to validate.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_validateEmail.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_validateEmail.js.html">src/methods/validateEmail.js</a>, <a href="src_methods_validateEmail.js.html#line7">line 7</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'>If the email is invalid.</div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>The valid email if it passes validation.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="validateUsername">
+        <a class="href-link" href="#validateUsername">#</a>
+        
+        <span class="code-name">
+            
+                validateUsername<span class="signature">(username)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Validates a username to ensure it meets specific rules.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>username</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The username to validate.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_validateUsername.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_validateUsername.js.html">src/methods/validateUsername.js</a>, <a href="src_methods_validateUsername.js.html#line7">line 7</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'>If the username does not meet the criteria.</div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>The valid username if it passes validation.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="verifyPassword">
+        <a class="href-link" href="#verifyPassword">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                verifyPassword<span class="signature">(password, hashedPassword, salt, iterations<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Verifies if a password matches a stored hash using a secure timing-safe comparison.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+            <th>Default</th>
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>password</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
+  
+
+  <td class="description last">Plain text password.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>hashedPassword</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
+  
+
+  <td class="description last">Stored hashed password.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>salt</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
+  
+
+  <td class="description last">Salt used during hashing.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>iterations</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          1000
+      
+      </td>
+  
+
+  <td class="description last">Iterations used for hashing.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="src_methods_verifyPassword.js.html" class="button">View Source</a>
+            <span>
+                <a href="src_methods_verifyPassword.js.html">src/methods/verifyPassword.js</a>, <a href="src_methods_verifyPassword.js.html#line13">line 13</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>True if the password is valid, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

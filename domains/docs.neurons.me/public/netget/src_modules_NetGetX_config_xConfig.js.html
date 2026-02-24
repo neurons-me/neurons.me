@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetGet Documentation src/modules/NetGetX/config/xConfig.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">NetGet</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/all.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-GETDirs.html">GETDirs</a></li><li><a href="module-NetGetX.html">NetGetX</a></li><li><a href="module-NginxPaths.html">NginxPaths</a></li><li><a href="module-Srvrs_CLI.html">Srvrs_CLI</a></li><li><a href="module-Utils.html">Utils</a></li><li><a href="module-addNewDomain.html">addNewDomain</a></li><li><a href="module-addSubdomain.html">addSubdomain</a></li><li><a href="module-advanceSettings.html">advanceSettings</a></li><li><a href="module-displayDomains.html">displayDomains</a></li><li><a href="module-domainsMenu.html">domainsMenu</a></li><li><a href="module-domainsTable.html">domainsTable</a></li><li><a href="module-editOrDeleteDomain.html">editOrDeleteDomain</a></li><li><a href="module-handleErrors.html">handleErrors</a></li><li><a href="module-handlePermissions.html">handlePermissions</a></li><li><a href="module-handlePermissionsForEnsureDir.html">handlePermissionsForEnsureDir</a></li><li><a href="module-ipUtils.html">ipUtils</a></li><li><a href="module-logAllDomainsTable.html">logAllDomainsTable</a></li><li><a href="module-logDomainInfo.html">logDomainInfo</a></li><li><a href="module-pathUtils.html">pathUtils</a></li><li><a href="module-promptForDomainAndEmail.html">promptForDomainAndEmail</a></li><li><a href="module-serverBlockConfigOptions.html">serverBlockConfigOptions</a></li><li><a href="module-setDefaultServerBlock.html">setDefaultServerBlock</a></li><li><a href="module-updateNginxConfig.html">updateNginxConfig</a></li><li><a href="module-verifyServerBlock.html">verifyServerBlock</a></li><li><a href="module-viewNginxConfig.html">viewNginxConfig</a></li></ul><h3>Classes</h3><ul><li><a href="NetGet.html">NetGet</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAndInstallCertbot">checkAndInstallCertbot</a></li><li><a href="global.html#checkCertbotNginxPlugin">checkCertbotNginxPlugin</a></li><li><a href="global.html#checkCertificates">checkCertificates</a></li><li><a href="global.html#checkPermissions">checkPermissions</a></li><li><a href="global.html#checkSelfSignedCertificates">checkSelfSignedCertificates</a></li><li><a href="global.html#checkWildcardCertificate">checkWildcardCertificate</a></li><li><a href="global.html#createNginxConfig">createNginxConfig</a></li><li><a href="global.html#displayCurrentSSLConfiguration">displayCurrentSSLConfiguration</a></li><li><a href="global.html#domainSSLConfiguration">domainSSLConfiguration</a></li><li><a href="global.html#ensureDirectoryExists">ensureDirectoryExists</a></li><li><a href="global.html#execShellCommand">execShellCommand</a></li><li><a href="global.html#generateSelfSignedCert">generateSelfSignedCert</a></li><li><a href="global.html#getState">getState</a></li><li><a href="global.html#initializeDirectories">initializeDirectories</a></li><li><a href="global.html#initializeState">initializeState</a></li><li><a href="global.html#installCertbot">installCertbot</a></li><li><a href="global.html#installCertbotNginxPlugin">installCertbotNginxPlugin</a></li><li><a href="global.html#isOpenSSLInstalled">isOpenSSLInstalled</a></li><li><a href="global.html#issueCertificateForDomain">issueCertificateForDomain</a></li><li><a href="global.html#letsEncryptMethod">letsEncryptMethod</a></li><li><a href="global.html#mainServerMenu">mainServerMenu</a></li><li><a href="global.html#obtainSSLCertificates">obtainSSLCertificates</a></li><li><a href="global.html#renewSSLCertificate">renewSSLCertificate</a></li><li><a href="global.html#scanAndLogCertificates">scanAndLogCertificates</a></li><li><a href="global.html#updateState">updateState</a></li><li><a href="global.html#verifyDNSRecord">verifyDNSRecord</a></li><li><a href="global.html#verifySSLCertificate">verifySSLCertificate</a></li><li><a href="global.html#waitForDNSPropagation">waitForDNSPropagation</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>src/modules/NetGetX/config/xConfig.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+
+const CONFIG_DIR = path.join('/opt/','.get');
+const USER_CONFIG_FILE = path.join(CONFIG_DIR, 'xConfig.json');
+
+/**
+ * Loads the user configuration file or creates it if it doesn't exist.
+ * @module NetGetX
+ * @submodule Config
+ * @returns {Promise&lt;Object>} The user configuration object.
+ */
+async function loadOrCreateXConfig() {
+    try {
+        if (!fs.existsSync(USER_CONFIG_FILE)) {
+            console.log(chalk.yellow('Default xConfig file does not exist. Creating...'));
+            const defaultConfig = {
+                mainServerName: "",
+                xMainOutPutPort: 3432,
+                domains: {},               
+                publicIP: "",
+                localIP: "",
+                getPath: "",
+                static: "",
+                devPath: "",
+                devStatic: "",
+                useSudo: false,
+                sslSelfSignedCertPath: "",
+                sslSelfSignedKeyPath: "",
+                sqliteDatabasePath: "",
+            };
+            fs.writeFileSync(USER_CONFIG_FILE, JSON.stringify(defaultConfig, null, 4));
+            return defaultConfig;
+        } else {
+            const data = await fs.promises.readFile(USER_CONFIG_FILE, 'utf8');
+            return JSON.parse(data);
+        }
+    } catch (error) {
+        console.error(chalk.red(`Failed to load or create user configuration: ${error.message}`));
+        throw new Error('Failed to initialize user configuration.');
+    }
+}
+
+/**
+ * Updates the user configuration file with specific key-value pairs.
+ * @module NetGetX
+ * @subcategory Config
+ * @param {Object} updates - An object containing the key-value pairs to update.
+ * @returns {Promise&lt;void>}
+ */
+async function saveXConfig(updates) {
+    try {
+        // Ensure the configuration directory exists
+        if (!fs.existsSync(CONFIG_DIR)) {
+            console.log(chalk.yellow(`Configuration directory does not exist at ${CONFIG_DIR}. Creating...`));
+            fs.mkdirSync(CONFIG_DIR);
+        }
+
+        let config = {};
+        // Check if the configuration file exists and read the current configuration
+        if (fs.existsSync(USER_CONFIG_FILE)) {
+            const data = await fs.promises.readFile(USER_CONFIG_FILE, 'utf8');
+            config = JSON.parse(data);
+        }
+
+        // Apply updates to the appropriate domain or root level
+        let updatesApplied = {};
+        if (updates.domain) {
+            if (!config.domains) {
+                config.domains = {};
+            }
+            const domain = updates.domain;
+            if (!config.domains[domain]) {
+                config.domains[domain] = {};
+            }
+            Object.assign(config.domains[domain], updates);
+            updatesApplied[domain] = updates;
+            delete updates.domain;  // Remove domain from updates to prevent root-level updates
+        } else {
+            Object.assign(config, updates);
+            updatesApplied = updates;
+        }
+
+        // Write the updated configuration back to the file
+        await fs.promises.writeFile(USER_CONFIG_FILE, JSON.stringify(config, null, 4));
+        console.log(chalk.green('Configuration updated successfully.'));
+        
+        // Log only the updated values
+        for (const [key, value] of Object.entries(updatesApplied)) {
+            if (typeof value === 'object' &amp;&amp; !Array.isArray(value)) {
+                for (const [subKey, subValue] of Object.entries(value)) {
+                    console.log(`xConfig.domains[${key}].${chalk.bgWhite.black.bold(subKey)}: ${chalk.yellow(subValue)} : ${chalk.bgGreen.bold("Success")}.`);
+                }
+            } else {
+                console.log(`xConfig.${chalk.bgWhite.black.bold(key)}: ${chalk.yellow(value)} : ${chalk.bgGreen.bold("Success")}.`);
+            }
+        }
+    } catch (error) {
+        console.error(chalk.red(`Failed to update user configuration: ${error.message}`));
+        throw new Error('Failed to update user configuration.');
+    }
+}
+
+export { loadOrCreateXConfig, saveXConfig };</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

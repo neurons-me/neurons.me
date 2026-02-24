@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>This.Audio Docs Global</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">this.audio</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+             <a
+                    href="https://docs.neurons.me"
+                    class="link"
+                >
+                    Docs
+                </a>
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Index
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/this.audio"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#Audio">Audio</a></li><li><a href="global.html#createAudioFormatter">createAudioFormatter</a></li><li><a href="global.html#isBlob">isBlob</a></li><li><a href="global.html#isBrowser">isBrowser</a></li><li><a href="global.html#isNode">isNode</a></li><li><a href="global.html#isPath">isPath</a></li><li><a href="global.html#isURL">isURL</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p></p>
+                    <h1>Global</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="Audio">
+        <a class="href-link" href="#Audio">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                Audio<span class="signature">(audioFilePath)</span><span class="type-signature"> &rarr; {Promise.&lt;Object>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Asynchronously processes an audio file, returning structured data or an error object.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>audioFilePath</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The path or URL to the audio file.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="this.audio.js.html" class="button">View Source</a>
+            <span>
+                <a href="this.audio.js.html">this.audio.js</a>, <a href="this.audio.js.html#line15">line 15</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>A promise that resolves to an object indicating success or failure, with data or an error message.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;Object></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="createAudioFormatter">
+        <a class="href-link" href="#createAudioFormatter">#</a>
+        
+        <span class="code-name">
+            
+                createAudioFormatter<span class="signature">(audioInput)</span><span class="type-signature"> &rarr; {AudioFormatterNode|AudioFormatterBrowser}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Creates an instance of the appropriate AudioFormatter (Node or Browser) based on the environment and input type.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>audioInput</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+|
+
+<code class="param-type">Blob</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The path to the audio file or the audio Blob/URL.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="createAudioFormatter.js.html" class="button">View Source</a>
+            <span>
+                <a href="createAudioFormatter.js.html">createAudioFormatter.js</a>, <a href="createAudioFormatter.js.html#line68">line 68</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Throws:</label></div>
+        <div class="column is-10">
+            
+                    
+<div class="columns">
+    
+    <div class='param-desc column is-7'>If the environment is unsupported or the input type is invalid.</div>
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+<code class="param-type">Error</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>An instance of the appropriate AudioFormatter.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">AudioFormatterNode</code>
+|
+
+<code class="param-type">AudioFormatterBrowser</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="isBlob">
+        <a class="href-link" href="#isBlob">#</a>
+        
+        <span class="code-name">
+            
+                isBlob<span class="signature">(input)</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if the provided input is a Blob.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>input</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">any</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The input to check.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="createAudioFormatter.js.html" class="button">View Source</a>
+            <span>
+                <a href="createAudioFormatter.js.html">createAudioFormatter.js</a>, <a href="createAudioFormatter.js.html#line56">line 56</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>- True if the input is a Blob, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="isBrowser">
+        <a class="href-link" href="#isBrowser">#</a>
+        
+        <span class="code-name">
+            
+                isBrowser<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if the current runtime environment is a browser.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="createAudioFormatter.js.html" class="button">View Source</a>
+            <span>
+                <a href="createAudioFormatter.js.html">createAudioFormatter.js</a>, <a href="createAudioFormatter.js.html#line23">line 23</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>True if the environment is a browser, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="isNode">
+        <a class="href-link" href="#isNode">#</a>
+        
+        <span class="code-name">
+            
+                isNode<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if the current runtime environment is Node.js.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="createAudioFormatter.js.html" class="button">View Source</a>
+            <span>
+                <a href="createAudioFormatter.js.html">createAudioFormatter.js</a>, <a href="createAudioFormatter.js.html#line15">line 15</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>True if the environment is Node.js, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="isPath">
+        <a class="href-link" href="#isPath">#</a>
+        
+        <span class="code-name">
+            
+                isPath<span class="signature">(input)</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if the provided input is a valid path.
+This is a very basic check and might need to be more robust.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>input</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">any</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The input to check.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="createAudioFormatter.js.html" class="button">View Source</a>
+            <span>
+                <a href="createAudioFormatter.js.html">createAudioFormatter.js</a>, <a href="createAudioFormatter.js.html#line33">line 33</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>- True if the input is a string, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="isURL">
+        <a class="href-link" href="#isURL">#</a>
+        
+        <span class="code-name">
+            
+                isURL<span class="signature">(input)</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if the provided input is a valid URL.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>input</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">any</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The input to check.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="createAudioFormatter.js.html" class="button">View Source</a>
+            <span>
+                <a href="createAudioFormatter.js.html">createAudioFormatter.js</a>, <a href="createAudioFormatter.js.html#line42">line 42</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>- True if the input is a valid URL, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

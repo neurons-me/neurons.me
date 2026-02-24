@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetGet Documentation src/modules/NetGetX/Domains/domainsOptions.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">NetGet</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/all.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-GETDirs.html">GETDirs</a></li><li><a href="module-NetGetX.html">NetGetX</a></li><li><a href="module-NginxPaths.html">NginxPaths</a></li><li><a href="module-Srvrs_CLI.html">Srvrs_CLI</a></li><li><a href="module-Utils.html">Utils</a></li><li><a href="module-addNewDomain.html">addNewDomain</a></li><li><a href="module-addSubdomain.html">addSubdomain</a></li><li><a href="module-advanceSettings.html">advanceSettings</a></li><li><a href="module-displayDomains.html">displayDomains</a></li><li><a href="module-domainsMenu.html">domainsMenu</a></li><li><a href="module-domainsTable.html">domainsTable</a></li><li><a href="module-editOrDeleteDomain.html">editOrDeleteDomain</a></li><li><a href="module-handleErrors.html">handleErrors</a></li><li><a href="module-handlePermissions.html">handlePermissions</a></li><li><a href="module-handlePermissionsForEnsureDir.html">handlePermissionsForEnsureDir</a></li><li><a href="module-ipUtils.html">ipUtils</a></li><li><a href="module-logAllDomainsTable.html">logAllDomainsTable</a></li><li><a href="module-logDomainInfo.html">logDomainInfo</a></li><li><a href="module-pathUtils.html">pathUtils</a></li><li><a href="module-promptForDomainAndEmail.html">promptForDomainAndEmail</a></li><li><a href="module-serverBlockConfigOptions.html">serverBlockConfigOptions</a></li><li><a href="module-setDefaultServerBlock.html">setDefaultServerBlock</a></li><li><a href="module-updateNginxConfig.html">updateNginxConfig</a></li><li><a href="module-verifyServerBlock.html">verifyServerBlock</a></li><li><a href="module-viewNginxConfig.html">viewNginxConfig</a></li></ul><h3>Classes</h3><ul><li><a href="NetGet.html">NetGet</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAndInstallCertbot">checkAndInstallCertbot</a></li><li><a href="global.html#checkCertbotNginxPlugin">checkCertbotNginxPlugin</a></li><li><a href="global.html#checkCertificates">checkCertificates</a></li><li><a href="global.html#checkPermissions">checkPermissions</a></li><li><a href="global.html#checkSelfSignedCertificates">checkSelfSignedCertificates</a></li><li><a href="global.html#checkWildcardCertificate">checkWildcardCertificate</a></li><li><a href="global.html#createNginxConfig">createNginxConfig</a></li><li><a href="global.html#displayCurrentSSLConfiguration">displayCurrentSSLConfiguration</a></li><li><a href="global.html#domainSSLConfiguration">domainSSLConfiguration</a></li><li><a href="global.html#ensureDirectoryExists">ensureDirectoryExists</a></li><li><a href="global.html#execShellCommand">execShellCommand</a></li><li><a href="global.html#generateSelfSignedCert">generateSelfSignedCert</a></li><li><a href="global.html#getState">getState</a></li><li><a href="global.html#initializeDirectories">initializeDirectories</a></li><li><a href="global.html#initializeState">initializeState</a></li><li><a href="global.html#installCertbot">installCertbot</a></li><li><a href="global.html#installCertbotNginxPlugin">installCertbotNginxPlugin</a></li><li><a href="global.html#isOpenSSLInstalled">isOpenSSLInstalled</a></li><li><a href="global.html#issueCertificateForDomain">issueCertificateForDomain</a></li><li><a href="global.html#letsEncryptMethod">letsEncryptMethod</a></li><li><a href="global.html#mainServerMenu">mainServerMenu</a></li><li><a href="global.html#obtainSSLCertificates">obtainSSLCertificates</a></li><li><a href="global.html#renewSSLCertificate">renewSSLCertificate</a></li><li><a href="global.html#scanAndLogCertificates">scanAndLogCertificates</a></li><li><a href="global.html#updateState">updateState</a></li><li><a href="global.html#verifyDNSRecord">verifyDNSRecord</a></li><li><a href="global.html#verifySSLCertificate">verifySSLCertificate</a></li><li><a href="global.html#waitForDNSPropagation">waitForDNSPropagation</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>src/modules/NetGetX/Domains/domainsOptions.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//netget/src/modules/NetGetX/Domains/domainsOptions.js
+import inquirer from 'inquirer';
+import chalk from 'chalk';
+import NetGetX_CLI from '../NetGetX.cli.js';
+import { loadOrCreateXConfig, saveXConfig } from '../config/xConfig.js';
+import { scanAndLogCertificates } from './SSL/SSLCertificates.js';
+import { registerDomain, deleteDomain, updateDomainTarget, updateDomainType } from '../../../sqlite/utils_sqlite3.js';
+
+/**
+ * Logs the domain information to the console.
+ * @param {Object} domainConfig - The domain configuration object.
+ * @param {string} domain - The domain name.
+ * @category NetGetX
+ * @subcategory Domains
+ * @module logDomainInfo
+ */ 
+const logDomainInfo = (domainConfig, domain) => {
+    if (domainConfig.subDomains &amp;&amp; Object.keys(domainConfig.subDomains).length > 0) {
+        console.log(chalk.blue('\nDomain Information:'));
+        const subDomainsTable = Object.keys(domainConfig.subDomains).map(subDomain => ({
+            Subdomain: subDomain,
+            Target: domainConfig.subDomains[subDomain].target,
+            Type: domainConfig.subDomains[subDomain].type
+        }));
+        console.table(subDomainsTable);
+    } else {
+        console.log(chalk.yellow('No subdomains configured.'));
+    }
+};
+
+/**
+ * Logs the domain information to the console for all domains in the domains object.
+ * @param {Array} domains - The domains array from xConfig.
+ * @category NetGetX
+ * @subcategory Domains
+ * @module displayDomains
+ * @param {Array} domains - The domains array from xConfig.
+ */ 
+const displayDomains = (domains) => {
+    console.log('\nConfigured Domains:');
+    domains.forEach(domain => console.log(`- ${domain}`));
+};
+
+/**
+ * Logs the domain information to the console for all domains in the domains object.
+ * @param {Object} domainsConfig - The domains configuration object from xConfig.
+ * @category NetGetX
+ * @subcategory Domains
+ * @module logAllDomainsTable
+ */
+const logAllDomainsTable = (domainsConfig) => {
+    console.log(chalk.blue('\nDomains Information:'));
+    const domainTable = Object.keys(domainsConfig).map(domain => ({
+        Domain: domain,
+        
+    }));
+    console.table(domainTable);
+};
+
+/**
+ * Logs the domain information to the console for all domains in the domains object.
+ * @param {Object} domainsConfig - The domains configuration object from xConfig.
+ * @category NetGetX
+ * @subcategory Domains
+ * @module domainsTable
+ * @param {Object} domainsConfig - The domains configuration object from xConfig.
+ */ 
+const domainsTable = (domainsConfig) => {
+    console.log(chalk.blue('\nDomains Information:'));
+    const domainTable = Object.keys(domainsConfig).map(domain => ({
+        Domain: domain,
+        Target: domainsConfig[domain].target,
+        Type: domainsConfig[domain].type
+
+    }));
+    console.table(domainTable);
+};
+
+const validateDomain = (domain) => {
+    const domainRegex = /^(?!:\/\/)([a-zA-Z0-9-_]{1,63}\.)+[a-zA-Z]{2,6}$/;
+    return domainRegex.test(domain) ? true : 'Enter a valid domain (e.g., example.com or sub.example.com)';
+};
+
+
+/**
+ * Adds a new domain to the xConfig object.
+ * @returns {Promise&lt;void>}
+ * @category NetGetX
+ * @subcategory Domains
+ * @module addNewDomain
+ */
+const addNewDomain = async () => {
+    while (true) {
+        const serviceTypeAnswer = await inquirer.prompt([
+            {
+                type: 'list',
+                name: 'serviceType',
+                message: 'Select the type of service for this domain:',
+                choices: [
+                    { name: 'Serve Static Content', value: 'static' },
+                    { name: 'Forward Port', value: 'server' }
+                ]
+            }
+        ]);
+
+        const type = serviceTypeAnswer.serviceType;
+
+        let port = '';
+        if (serviceTypeAnswer.serviceType === 'server') {
+            const forwardPortAnswer = await inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'server',
+                    message: 'Enter the forward port for this domain (type /b to go back):',
+                    validate: input => input ? true : 'Forward port is required.'
+                }
+            ]);
+
+            if (forwardPortAnswer.server === '/b') {
+                console.log(chalk.blue('Going back to the previous menu...'));
+                return;
+            }
+
+            port = forwardPortAnswer.server;
+        } else if (serviceTypeAnswer.serviceType === 'static') {
+            const staticPathAnswer = await inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'staticPath',
+                    message: 'Enter the path to the static file you want to serve (type /b to go back):',
+                    validate: input => input ? true : 'Static file path is required.'
+                }
+            ]);
+
+            if (staticPathAnswer.staticPath === '/b') {
+                console.log(chalk.blue('Going back to the previous menu...'));
+                return;
+            }
+
+            port = staticPathAnswer.staticPath;
+        }
+
+        const domainAnswer = await inquirer.prompt([
+            {
+                type: 'input',
+                name: 'domain',
+                message: 'Enter the new domain (e.g., example.com or sub.example.com) (type /b to go back):',
+                validate: input => {
+                    if (input === '/b') return true;
+                    return validateDomain(input);
+                }
+            }
+        ]);
+
+        if (domainAnswer.domain === '/b') {
+            console.log(chalk.blue('Going back to the previous menu...'));
+            return;
+        }
+
+        const emailAnswer = await inquirer.prompt([
+            {
+                type: 'input',
+                name: 'email',
+                message: 'Enter the email associated with this domain (type /b to go back):',
+                validate: input => input ? true : 'Email is required.'
+            }
+        ]);
+
+        if (emailAnswer.email === '/b') {
+            console.log(chalk.blue('Going back to the previous menu...'));
+            return;
+        }
+
+        const { domain, email} = { ...domainAnswer, ...emailAnswer };
+        const xConfig = await loadOrCreateXConfig();
+
+        if (!xConfig.domains) {
+            xConfig.domains = {};
+        }
+
+        if (xConfig.domains[domain]) {
+            console.log(chalk.red(`Domain ${domain} already exists.`));
+            return;
+        }
+
+        const newDomainConfig = {
+            sslMode: 'letsencrypt',
+            email: email,
+            target: port,
+            type: type,
+            subDomains:{}
+        };
+
+        // Save only the new domain configuration
+        xConfig.domains[domain] = newDomainConfig;
+        // Sort the domains alphabetically
+        const sortedDomains = Object.keys(xConfig.domains).sort().reduce((acc, key) => {
+            acc[key] = xConfig.domains[key];
+            return acc;
+        }, {});
+        xConfig.domains = sortedDomains;
+        await saveXConfig({ domains: xConfig.domains });
+        await registerDomain(
+            domain, 
+            email, 
+            'letsencrypt', 
+            '', 
+            '', 
+            port, 
+            type, 
+            '');
+
+        console.log(chalk.green(`Domain ${domain} added successfully.`));
+        return;  // Exit the loop after successful addition
+    }
+};
+
+/**
+ * Adds a subdomain to the specified domain.
+ * @param {string} domain - The domain to add the subdomain to.
+ * @returns {Promise&lt;void>} 
+ * @category NetGetX
+ * @subcategory Domains
+ * @module addSubdomain
+ */
+const addSubdomain = async (domain) => {
+    const { subdomain } = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'subdomain',
+            message: 'Enter the subdomain name:',
+        }
+    ]);
+
+    if (!subdomain) {
+        console.log(chalk.red('Subdomain name cannot be empty.'));
+        return;
+    }
+
+    const serviceTypeAnswer = await inquirer.prompt([
+        {
+            type: 'list',
+            name: 'serviceType',
+            message: 'Select the type of service for this domain:',
+            choices: [
+                { name: 'Serve Static Content', value: 'static' },
+                { name: 'Forward Port', value: 'server' }
+            ]
+        }
+    ]);
+
+    let port = '';
+    if (serviceTypeAnswer.serviceType === 'server') {
+        const forwardPortAnswer = await inquirer.prompt([
+            {
+                type: 'input',
+                name: 'server',
+                message: 'Enter the forward port for this domain (type /b to go back):',
+                validate: input => input ? true : 'Forward port is required.'
+            }
+        ]);
+
+        if (forwardPortAnswer.server === '/b') {
+            console.log(chalk.blue('Going back to the previous menu...'));
+            return;
+        }
+
+        port = forwardPortAnswer.server;
+    } else if (serviceTypeAnswer.serviceType === 'static') {
+        const staticPathAnswer = await inquirer.prompt([
+            {
+                type: 'input',
+                name: 'staticPath',
+                message: 'Enter the path to the static file you want to serve (type /b to go back):',
+                validate: input => input ? true : 'Static file path is required.'
+            }
+        ]);
+
+        if (staticPathAnswer.staticPath === '/b') {
+            console.log(chalk.blue('Going back to the previous menu...'));
+            return;
+        }
+
+        port = staticPathAnswer.staticPath;
+    }
+
+    const xConfig = await loadOrCreateXConfig();
+
+    if (!xConfig.domains[domain].subDomains) {
+        xConfig.domains[domain].subDomains = {};
+    }
+
+    if (xConfig.domains[domain].subDomains[subdomain]) {
+        console.log(chalk.red(`Subdomain ${subdomain} already exists for domain ${domain}.`));
+        return;
+    }
+
+    const newDomainConfig = {
+        "target": port,
+        "type": serviceTypeAnswer.serviceType
+    }
+
+    xConfig.domains[domain].subDomains[subdomain] = newDomainConfig;
+    const sortedSubdomains = Object.keys(xConfig.domains[domain].subDomains).sort().reduce((acc, key) => {
+        acc[key] = xConfig.domains[domain].subDomains[key];
+        return acc;
+    }, {});
+
+    xConfig.domains[domain].subDomains = sortedSubdomains;
+
+    // Save the updated configuration
+    await saveXConfig({ domains: xConfig.domains });
+
+    // Register the subdomain into the database
+    await registerDomain(
+        subdomain, 
+        xConfig.domains[domain].email, 
+        'letsencrypt', 
+        xConfig.domains[domain].SSLCertificateSqlitePath, 
+        xConfig.domains[domain].SSLCertificateKeySqlitePath, 
+        port, 
+        serviceTypeAnswer.serviceType, 
+        '');
+
+    console.log(chalk.green(`Subdomain ${subdomain} added to domain ${domain}.`));
+    return;
+};
+
+const editDomainDetails = async (domain, domainConfig) => {
+    const editOptions = await inquirer.prompt([
+        {
+            type: 'list',
+            name: 'editOption',
+            message: 'Select an option to edit:',
+            choices: [
+                { name: 'Edit Type', value: 'editType' },
+                { name: 'Edit Target', value: 'editTarget' },
+                { name: 'Back to Domains Menu', value: 'back' }
+            ]
+        }
+    ]);
+
+    switch (editOptions.editOption) {
+        case 'editType':
+            const typeAnswer = await inquirer.prompt([
+                {
+                    type: 'list',
+                    name: 'serviceType',
+                    message: 'Select the new type of service for this domain:',
+                    choices: [
+                        { name: 'Serve Static Content', value: 'static' },
+                        { name: 'Forward Port', value: 'server' }
+                    ]
+                }
+            ]);
+
+            if (forwardPortAnswer.server === '/b') {
+                console.log(chalk.blue('Going back to the previous menu...'));
+                return;
+            }
+
+            domainConfig.type = typeAnswer.serviceType;
+            await updateDomainType(domain, typeAnswer.serviceType);
+            break;
+
+        case 'editTarget':
+            const targetAnswer = await inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'target',
+                    message: 'Enter the new target for this domain:',
+                    validate: input => input ? true : 'Target is required.'
+                }
+            ]);
+
+            if (forwardPortAnswer.server === '/b') {
+                console.log(chalk.blue('Going back to the previous menu...'));
+                return;
+            }
+
+            domainConfig.target = targetAnswer.target;
+            await updateDomainTarget(domain, targetAnswer.target);
+            break;
+
+        case 'back':
+            return domainConfig;
+    }
+    return domainConfig;
+};
+
+/**
+ * Edits or deletes a domain from the xConfig object.
+ * @param {string} domain - The domain to edit or delete.
+ * @returns {Promise&lt;void>}
+ * @category NetGetX
+ * @subcategory Domains
+ * @module editOrDeleteDomain
+ */ 
+const editOrDeleteDomain = async (domain) => {
+    console.clear();
+    try {
+        const xConfig = await loadOrCreateXConfig();
+        const domainConfig = xConfig.domains[domain];
+
+        if (!domainConfig) {
+            console.log(chalk.red(`Domain ${domain} configuration not found.`));
+            return;
+        }
+
+        const options = [
+            { name: 'Edit Domain', value: 'editDomain' },
+            { name: 'Edit Subdomain', value: 'editSubdomain' },
+            { name: 'Delete Domain', value: 'deleteDomain' },
+            { name: 'Delete Subdomain', value: 'deleteSubdomain' },
+            { name: 'Back to Domains Menu', value: 'back' }
+        ];
+
+        const answer = await inquirer.prompt([
+            {
+                type: 'list',
+                name: 'action',
+                message: 'Select an option:',
+                choices: options
+            }
+        ]);
+
+        switch (answer.action) {
+            case 'editDomain':
+                console.clear();
+                const updatedConfig = await editDomainDetails(domain, domainConfig);
+                xConfig.domains[domain] = updatedConfig;
+                await saveXConfig({ domains: xConfig.domains });
+                console.log(chalk.green(`Domain ${domain} configuration updated successfully.`));
+                return;
+            
+            case 'editSubdomain':
+                console.clear();
+                const listsubDomains = Object.keys(xConfig.domains[domain].subDomains || {});
+                if (listsubDomains.length === 0) {
+                    console.log(chalk.red('No subdomains available to edit.'));
+                }
+                else {
+                    const subDomainToEdit = await inquirer.prompt([
+                        {
+                            type: 'list',
+                            name: 'subDomain',
+                            message: 'Select a subdomain to edit:',
+                            choices: [...listsubDomains, { name: 'Back', value: 'back' }]
+                        }
+                    ]);
+
+                    if (subDomainToEdit.subDomain === 'back') {
+                        console.log(chalk.blue('Going back to the previous menu...'));
+                        return;
+                    }
+
+                    const updatedSubDomainConfig = await editDomainDetails(subDomainToEdit.subDomain, xConfig.domains[domain].subDomains[subDomainToEdit.subDomain]);
+                    xConfig.domains[domain].subDomains[subDomainToEdit.subDomain] = updatedSubDomainConfig;
+                    await saveXConfig({ domains: xConfig.domains });
+                    console.log(chalk.green(`Subdomain ${subDomainToEdit.subDomain} configuration updated successfully.`));
+                }
+                return;
+
+            case 'deleteDomain':
+                const confirmDelete = await inquirer.prompt([
+                    {
+                    type: 'confirm',
+                    name: 'confirm',
+                    message: `Are you sure you want to delete the domain ${domain}?`,
+                    default: false
+                    }
+                ]);
+
+                if (forwardPortAnswer.server === '/b') {
+                    console.log(chalk.blue('Going back to the previous menu...'));
+                    return;
+                }
+
+                delete xConfig.domains[domain];
+                await deleteDomain(domain);
+                await saveXConfig({ domains: xConfig.domains });
+                console.log(chalk.green(`Domain ${domain} deleted successfully.`));
+                return;
+
+            case 'deleteSubdomain':
+                const subDomains = Object.keys(xConfig.domains[domain].subDomains || {});
+                if (subDomains.length === 0) {
+                    console.log(chalk.red('No subdomains available to delete.'));
+                } else {
+                    const subDomainToDelete = await inquirer.prompt([
+                        {
+                            type: 'list',
+                            name: 'subDomain',
+                            message: 'Select a subdomain to delete:',
+                            choices: [...subDomains, { name: 'Back', value: 'back' }]
+                        }
+                    ]);
+
+                    if (subDomainToDelete.subDomain === 'back') {
+                        console.log(chalk.blue('Going back to the previous menu...'));
+                        return;
+                    }
+
+                    const confirmDelete = await inquirer.prompt([
+                        {
+                        type: 'confirm',
+                        name: 'confirm',
+                        message: `Are you sure you want to delete the subdomain ${subDomainToDelete.subDomain}?`,
+                        default: false
+                        }
+                    ]);
+    
+                    if (!confirmDelete.confirm) {
+                        console.log(chalk.blue('Subdomain deletion was cancelled.'));
+                        return;
+                    }
+                    delete xConfig.domains[domain].subDomains[subDomainToDelete.subDomain];
+                    await deleteDomain(subDomainToDelete.subDomain);
+                    await saveXConfig({ domains: xConfig.domains });
+                    console.log(chalk.green(`Subdomain ${subDomainToDelete.subDomain} deleted successfully.`));
+                }
+                return;
+
+            case 'back':
+                return;
+        }
+
+        // After an action, redisplay the menu
+        await editOrDeleteDomain(domain);
+    } catch (error) {
+        console.error(chalk.red('An error occurred in the Edit/Delete Domain Menu:', error.message));
+    }
+};
+
+/**
+ * Displays the advance settings for the domain.
+ * @returns {Promise&lt;void>} 
+ * @category NetGetX
+ * @subcategory Domains
+ * @module advanceSettings
+ */
+const advanceSettings = async () => {
+    try{
+        const xConfig = await loadOrCreateXConfig();
+        const answers = await inquirer.prompt({
+            type : 'list',
+            name : 'option',
+            message : 'Select an option:',
+            choices: [
+                'Scan All SSL Certificates Issued',
+                'View Certbot Logs',
+                'Back to NetGetX Settings'
+            ]
+        });
+
+        switch (answers.option) {
+            case 'Scan All SSL Certificates Issued':
+                await scanAndLogCertificates();
+            case 'back':
+                console.log(chalk.green('Returning to NetGetX Settings...'));
+                await NetGetX_CLI(xConfig);
+        }
+    
+    } 
+    catch (error) {
+        console.error(chalk.red('An error occurred in the Advance Domain Menu:', error.message));
+    }    
+};
+
+const linkDevelopmentAppProject = async (domain) => {
+    const { projectPath } = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'projectPath',
+            message: 'Enter the path where the project is being developed:',
+        }
+    ]);
+
+    const xConfig = await loadOrCreateXConfig();
+    xConfig.domains[domain].projectPath = projectPath;
+    await saveXConfig(xConfig);
+    await updateDomain(
+        domain,
+        xConfig.domains[domain].email,
+        'letsencrypt',
+        xConfig.domains[domain].SSLCertificateSqlitePath, 
+        xConfig.domains[domain].SSLCertificateKeySqlitePath, 
+        xConfig.domains[domain].target,
+        xConfig.domains[domain].type,
+        projectPath
+    );
+
+    console.log(chalk.green(`Linked development app project at ${projectPath} with domain ${domain}.`));
+};
+
+export {
+    displayDomains,
+    validateDomain,
+    addNewDomain,
+    addSubdomain,
+    editOrDeleteDomain,
+    logDomainInfo,
+    logAllDomainsTable,
+    linkDevelopmentAppProject,
+    domainsTable,
+    advanceSettings
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

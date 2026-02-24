@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cleaker src/methods/me.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Cleaker</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/be.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-Index.html">Index</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generatePassword">generatePassword</a></li><li><a href="global.html#hashPassword">hashPassword</a></li><li><a href="global.html#me">me</a></li><li><a href="global.html#passwordSecurityCheck">passwordSecurityCheck</a></li><li><a href="global.html#randomToken">randomToken</a></li><li><a href="global.html#salt">salt</a></li><li><a href="global.html#validateEmail">validateEmail</a></li><li><a href="global.html#validateUsername">validateUsername</a></li><li><a href="global.html#verifyPassword">verifyPassword</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>src/methods/me.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import jwt from 'jsonwebtoken';
+import axios from 'axios';
+
+/**
+ * .me: Handles identity logging and context establishment for space, user, and event requests.
+ * Logs the identity in the ledger on the provided port and v.path URL.
+ *
+ * @param {Object} options - Configuration options
+ * @param {string} options.ledger - The ledger API endpoint (v.path URL)
+ * @param {string} [options.jwtCookieName='jwt'] - The name of the JWT cookie to use for user identity
+ * @param {boolean} [options.requireAuth=false] - Set to true if user authentication is required
+ * @returns {Function} Express middleware for handling space, request, and user identity.
+ */
+function me({ ledger, jwtCookieName = 'jwt', requireAuth = false } = {}) {
+  return async (req, res, next) => {
+    const hostname = req.hostname || req.headers['host'];
+    const origin = req.headers['origin'] || null;
+    const baseDomain = process.env.ROOT_DOMAIN || 'cleaker.me';
+
+    // 1. Identify the Space (Domain)
+    const space = hostname.endsWith(baseDomain) ? hostname : baseDomain;
+    const namespace = hostname.replace(`.${baseDomain}`, '');
+    req.space = { domain: baseDomain, namespace };
+
+    // Logging the space and namespace details
+    console.log(`Namespace: ${req.space.namespace}`);
+    console.log(`Domain: ${req.space.domain}`);
+    console.log(`Route: ${req.originalUrl}`);
+
+    // Determine the request context
+    req.requestContext = origin === req.space.domain ? 'space-originated' : 'user-originated';
+
+    // Initialize identity logging entry
+    const ledgerEntry = {
+      space: req.space,
+      requestContext: req.requestContext,
+      timestamp: new Date(),
+      activeUser: null, // Populated if JWT session is valid
+    };
+
+    // Log the request context
+    console.log(`Request Context: ${req.requestContext}`);
+
+    // 2. Extract and Validate User Identity via JWT
+    const token = req.cookies?.[jwtCookieName] || null;
+    if (token) {
+      try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        ledgerEntry.activeUser = {
+          userId: decoded.userId,
+          email: decoded.email, // Assuming email or username is included in the token
+        };
+        req.user = ledgerEntry.activeUser;
+
+        // Logging user identity details
+        console.log(`Active User ID: ${req.user.userId}`);
+        console.log(`Active User Email: ${req.user.email}`);
+      } catch (error) {
+        console.error('JWT verification error:', error);
+        if (requireAuth) {
+          return res.status(401).send('Unauthorized');
+        }
+      }
+    } else if (requireAuth) {
+      return res.status(401).send('Unauthorized');
+    }
+
+    // 3. Log Identity and Context to the Ledger (if ledger is provided)
+    if (ledger) {
+      try {
+        await axios.post(ledger, ledgerEntry);
+        console.log(`Logged identity in ledger for space: ${space} and user: ${req.user?.userId || 'unknown'}`);
+      } catch (error) {
+        console.error('Error logging to ledger:', error.message);
+      }
+    } else {
+      console.log('Ledger logging skipped: No ledger URL provided.');
+    }
+
+    next();
+  };
+}
+
+export default me;</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

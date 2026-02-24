@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetGet Documentation Domains</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">NetGet</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/all.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-NetGetX.html">NetGetX</a></li><li><a href="module-PortManagement.html">PortManagement</a></li><li><a href="module-Srvrs_CLI.html">Srvrs_CLI</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-NetGetX.Config.html">Config</a></li><li><a href="module-NetGetX.Domains.html">Domains</a></li><li><a href="module-NetGetX.NginxConfiguration.html">NginxConfiguration</a></li><li><a href="module-NetGetX.OpenResty.html">OpenResty</a></li><li><a href="module-NetGetX.SSL.html">SSL</a></li><li><a href="module-NetGetX.Utils.html">Utils</a></li></ul><h3>Classes</h3><ul><li><a href="NetGet.html">NetGet</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAndSetFilePermissions">checkAndSetFilePermissions</a></li><li><a href="global.html#checkPermissions">checkPermissions</a></li><li><a href="global.html#displayManualInstructions">displayManualInstructions</a></li><li><a href="global.html#domainsTable">domainsTable</a></li><li><a href="global.html#ensureDirectoryExists">ensureDirectoryExists</a></li><li><a href="global.html#execShellCommand">execShellCommand</a></li><li><a href="global.html#getDirectoryPaths">getDirectoryPaths</a></li><li><a href="global.html#getDomainsFromDB">getDomainsFromDB</a></li><li><a href="global.html#getLocalIP">getLocalIP</a></li><li><a href="global.html#getPublicIP">getPublicIP</a></li><li><a href="global.html#getState">getState</a></li><li><a href="global.html#handlePermission">handlePermission</a></li><li><a href="global.html#handlePermissionErrorForEnsureDir">handlePermissionErrorForEnsureDir</a></li><li><a href="global.html#initializeDirectories">initializeDirectories</a></li><li><a href="global.html#initializeState">initializeState</a></li><li><a href="global.html#pathExists">pathExists</a></li><li><a href="global.html#promptForDomainAndEmail">promptForDomainAndEmail</a></li><li><a href="global.html#retrieveSubdomainsTable">retrieveSubdomainsTable</a></li><li><a href="global.html#tryElevatedPrivileges">tryElevatedPrivileges</a></li><li><a href="global.html#updateState">updateState</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Namespace</p>
+                    <h1>Domains</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-NetGetX.html">NetGetX</a>.</span>Domains</h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_netget_MainMenu.cli.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_netget_MainMenu.cli.js.html">modules/netget_MainMenu.cli.js</a>, <a href="modules_netget_MainMenu.cli.js.html#line39">line 39</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".addNewDomain">
+        <a class="href-link" href="#.addNewDomain">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                addNewDomain<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Adds a new domain to the database.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domainsOptions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domainsOptions.js.html">modules/NetGetX/Domains/domainsOptions.js</a>, <a href="modules_NetGetX_Domains_domainsOptions.js.html#line114">line 114</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".addSubdomain">
+        <a class="href-link" href="#.addSubdomain">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                addSubdomain<span class="signature">(domain)</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Adds a subdomain to the specified domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain to add the subdomain to.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domainsOptions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domainsOptions.js.html">modules/NetGetX/Domains/domainsOptions.js</a>, <a href="modules_NetGetX_Domains_domainsOptions.js.html#line276">line 276</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".advanceSettings">
+        <a class="href-link" href="#.advanceSettings">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                advanceSettings<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Displays the advance settings for the domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domainsOptions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domainsOptions.js.html">modules/NetGetX/Domains/domainsOptions.js</a>, <a href="modules_NetGetX_Domains_domainsOptions.js.html#line636">line 636</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".domainsMenu">
+        <a class="href-link" href="#.domainsMenu">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                domainsMenu<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Displays the Domains Menu.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domains.cli.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domains.cli.js.html">modules/NetGetX/Domains/domains.cli.js</a>, <a href="modules_NetGetX_Domains_domains.cli.js.html#line68">line 68</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".editOrDeleteDomain">
+        <a class="href-link" href="#.editOrDeleteDomain">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                editOrDeleteDomain<span class="signature">(domain)</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Edits or deletes a domain from the database.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain to edit or delete.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domainsOptions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domainsOptions.js.html">modules/NetGetX/Domains/domainsOptions.js</a>, <a href="modules_NetGetX_Domains_domainsOptions.js.html#line481">line 481</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".logDomainInfo">
+        <a class="href-link" href="#.logDomainInfo">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                logDomainInfo<span class="signature">(domainConfig, domain)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Logs the domain information to the console.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domainConfig</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Object</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain configuration object.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain name.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domainsOptions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domainsOptions.js.html">modules/NetGetX/Domains/domainsOptions.js</a>, <a href="modules_NetGetX_Domains_domainsOptions.js.html#line51">line 51</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".viewNginxConfig">
+        <a class="href-link" href="#.viewNginxConfig">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                viewNginxConfig<span class="signature">(domain, nginxConfig)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Updates the NGINX configuration for a domain by writing the new configuration to the server block file.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain for which to update the NGINX configuration.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>nginxConfig</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The new NGINX configuration to write.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_viewNginxConfig.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_viewNginxConfig.js.html">modules/NetGetX/Domains/viewNginxConfig.js</a>, <a href="modules_NetGetX_Domains_viewNginxConfig.js.html#line15">line 15</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

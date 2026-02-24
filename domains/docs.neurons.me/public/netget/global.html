@@ -1,0 +1,3037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetGet Documentation Global</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">NetGet</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/all.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-NetGetX.html">NetGetX</a></li><li><a href="module-PortManagement.html">PortManagement</a></li><li><a href="module-Srvrs_CLI.html">Srvrs_CLI</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-NetGetX.Config.html">Config</a></li><li><a href="module-NetGetX.Domains.html">Domains</a></li><li><a href="module-NetGetX.NginxConfiguration.html">NginxConfiguration</a></li><li><a href="module-NetGetX.OpenResty.html">OpenResty</a></li><li><a href="module-NetGetX.SSL.html">SSL</a></li><li><a href="module-NetGetX.Utils.html">Utils</a></li></ul><h3>Classes</h3><ul><li><a href="NetGet.html">NetGet</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAndSetFilePermissions">checkAndSetFilePermissions</a></li><li><a href="global.html#checkPermissions">checkPermissions</a></li><li><a href="global.html#displayManualInstructions">displayManualInstructions</a></li><li><a href="global.html#domainsTable">domainsTable</a></li><li><a href="global.html#ensureDirectoryExists">ensureDirectoryExists</a></li><li><a href="global.html#execShellCommand">execShellCommand</a></li><li><a href="global.html#getDirectoryPaths">getDirectoryPaths</a></li><li><a href="global.html#getDomainsFromDB">getDomainsFromDB</a></li><li><a href="global.html#getLocalIP">getLocalIP</a></li><li><a href="global.html#getPublicIP">getPublicIP</a></li><li><a href="global.html#getState">getState</a></li><li><a href="global.html#handlePermission">handlePermission</a></li><li><a href="global.html#handlePermissionErrorForEnsureDir">handlePermissionErrorForEnsureDir</a></li><li><a href="global.html#initializeDirectories">initializeDirectories</a></li><li><a href="global.html#initializeState">initializeState</a></li><li><a href="global.html#pathExists">pathExists</a></li><li><a href="global.html#promptForDomainAndEmail">promptForDomainAndEmail</a></li><li><a href="global.html#retrieveSubdomainsTable">retrieveSubdomainsTable</a></li><li><a href="global.html#tryElevatedPrivileges">tryElevatedPrivileges</a></li><li><a href="global.html#updateState">updateState</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p></p>
+                    <h1>Global</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Members</h1>
+            <div class="members">
+            
+                <div class="member">
+
+<h4 class="name" id="getState">
+    <a class="href-link" href="#getState">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        getState
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    Returns the current X State.
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_xState.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_xState.js.html">modules/NetGetX/xState.js</a>, <a href="modules_NetGetX_xState.js.html#line21">line 21</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="initializeState">
+    <a class="href-link" href="#initializeState">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        initializeState
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    Initializes the X State with the provided data.
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_xState.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_xState.js.html">modules/NetGetX/xState.js</a>, <a href="modules_NetGetX_xState.js.html#line11">line 11</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+<h4 class="name" id="updateState">
+    <a class="href-link" href="#updateState">#</a>
+    
+        
+            <span class='tag'>constant</span>
+        
+    
+    <span class="code-name">
+        updateState
+    </span>
+    
+</h4>
+
+
+
+
+<div class="description">
+    Updates the X State with the provided data.
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_xState.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_xState.js.html">modules/NetGetX/xState.js</a>, <a href="modules_NetGetX_xState.js.html#line29">line 29</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="checkAndSetFilePermissions">
+        <a class="href-link" href="#checkAndSetFilePermissions">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                checkAndSetFilePermissions<span class="signature">(filePath, requiredPermissions)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks and sets file permissions if necessary.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>filePath</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Path to the file to check permissions for.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>requiredPermissions</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The permissions required (e.g., '755').</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_handlePermissions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_handlePermissions.js.html">modules/utils/handlePermissions.js</a>, <a href="modules_utils_handlePermissions.js.html#line112">line 112</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="checkPermissions">
+        <a class="href-link" href="#checkPermissions">#</a>
+        
+        <span class="code-name">
+            
+                checkPermissions<span class="signature">(dirPath, desiredMode)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks and corrects permissions of a directory.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>dirPath</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Path of the directory to check.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>desiredMode</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Desired permission mode (e.g., 0o755).</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_pathUtils.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_pathUtils.js.html">modules/utils/pathUtils.js</a>, <a href="modules_utils_pathUtils.js.html#line9">line 9</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="displayManualInstructions">
+        <a class="href-link" href="#displayManualInstructions">#</a>
+        
+        <span class="code-name">
+            
+                displayManualInstructions<span class="signature">(instructions)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Displays manual configuration instructions.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>instructions</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Instructions for manual permission resolution.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_handlePermissions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_handlePermissions.js.html">modules/utils/handlePermissions.js</a>, <a href="modules_utils_handlePermissions.js.html#line85">line 85</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="domainsTable">
+        <a class="href-link" href="#domainsTable">#</a>
+        
+        <span class="code-name">
+            
+                domainsTable<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Displays the domains table by reading from the SQLite3 database.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domainsOptions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domainsOptions.js.html">modules/NetGetX/Domains/domainsOptions.js</a>, <a href="modules_NetGetX_Domains_domainsOptions.js.html#line75">line 75</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="ensureDirectoryExists">
+        <a class="href-link" href="#ensureDirectoryExists">#</a>
+        
+        <span class="code-name">
+            
+                ensureDirectoryExists<span class="signature">(directory, desiredMode<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Function to ensure the directory exists and has the correct permissions.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+            <th>Attributes</th>
+            
+
+            
+            <th>Default</th>
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>directory</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
+  
+
+  <td class="description last">The directory path to check or create.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>desiredMode</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">number</code>
+
+
+  
+  </td>
+
+  
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
+
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          0o755
+      
+      </td>
+  
+
+  <td class="description last">The desired permission mode to set if the directory is created or permissions are incorrect.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_pathUtils.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_pathUtils.js.html">modules/utils/pathUtils.js</a>, <a href="modules_utils_pathUtils.js.html#line22">line 22</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="execShellCommand">
+        <a class="href-link" href="#execShellCommand">#</a>
+        
+        <span class="code-name">
+            
+                execShellCommand<span class="signature">(cmd)</span><span class="type-signature"> &rarr; {Promise.&lt;string>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Executes a shell command.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>cmd</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Command to execute.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_handlePermissions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_handlePermissions.js.html">modules/utils/handlePermissions.js</a>, <a href="modules_utils_handlePermissions.js.html#line95">line 95</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>- A promise that resolves with the command output.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;string></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="getDirectoryPaths">
+        <a class="href-link" href="#getDirectoryPaths">#</a>
+        
+        <span class="code-name">
+            
+                getDirectoryPaths<span class="signature">()</span><span class="type-signature"> &rarr; {object}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Get paths to important directories.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_GETDirs.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_GETDirs.js.html">modules/utils/GETDirs.js</a>, <a href="modules_utils_GETDirs.js.html#line37">line 37</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Object containing paths to key directories.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">object</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="getDomainsFromDB">
+        <a class="href-link" href="#getDomainsFromDB">#</a>
+        
+        <span class="code-name">
+            
+                getDomainsFromDB<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;Array>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Obtiene los dominios de la base de datos SQLite3.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domains.cli.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domains.cli.js.html">modules/NetGetX/Domains/domains.cli.js</a>, <a href="modules_NetGetX_Domains_domains.cli.js.html#line13">line 13</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promesa que se resuelve con la lista de dominios.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;Array></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="getLocalIP">
+        <a class="href-link" href="#getLocalIP">#</a>
+        
+        <span class="code-name">
+            
+                getLocalIP<span class="signature">()</span><span class="type-signature"> &rarr; {string|null}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Gets the local IP address of the machine.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_ipUtils.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_ipUtils.js.html">modules/utils/ipUtils.js</a>, <a href="modules_utils_ipUtils.js.html#line28">line 28</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>The local IP address or null if not found.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+|
+
+<code class="param-type">null</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="getPublicIP">
+        <a class="href-link" href="#getPublicIP">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                getPublicIP<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;(string|null)>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Gets the public IP address of the machine using an external API.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_ipUtils.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_ipUtils.js.html">modules/utils/ipUtils.js</a>, <a href="modules_utils_ipUtils.js.html#line9">line 9</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>The public IP address or null if not found.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;(string|null)></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="handlePermission">
+        <a class="href-link" href="#handlePermission">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                handlePermission<span class="signature">(taskDescription, autoCommand, manualInstructions)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Handles permission errors generically.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>taskDescription</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Description of the task that requires permission.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>autoCommand</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Command to execute for automatic resolution with elevated privileges.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>manualInstructions</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Manual instructions for the user to resolve permission issues.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_handlePermissions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_handlePermissions.js.html">modules/utils/handlePermissions.js</a>, <a href="modules_utils_handlePermissions.js.html#line13">line 13</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="handlePermissionErrorForEnsureDir">
+        <a class="href-link" href="#handlePermissionErrorForEnsureDir">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                handlePermissionErrorForEnsureDir<span class="signature">(directory)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Handles permission errors when creating directories.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>directory</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The directory path where permission was denied.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_handlePermissionErrorForEnsureDir.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_handlePermissionErrorForEnsureDir.js.html">modules/utils/handlePermissionErrorForEnsureDir.js</a>, <a href="modules_utils_handlePermissionErrorForEnsureDir.js.html#line9">line 9</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="initializeDirectories">
+        <a class="href-link" href="#initializeDirectories">#</a>
+        
+        <span class="code-name">
+            
+                initializeDirectories<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Initializes all necessary directories and checks their permissions.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_GETDirs.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_GETDirs.js.html">modules/utils/GETDirs.js</a>, <a href="modules_utils_GETDirs.js.html#line25">line 25</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="pathExists">
+        <a class="href-link" href="#pathExists">#</a>
+        
+        <span class="code-name">
+            
+                pathExists<span class="signature">(path)</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if a specified path (directory or file) exists.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>path</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The path to check.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_pathUtils.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_pathUtils.js.html">modules/utils/pathUtils.js</a>, <a href="modules_utils_pathUtils.js.html#line51">line 51</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>- True if the path exists, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">boolean</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="promptForDomainAndEmail">
+        <a class="href-link" href="#promptForDomainAndEmail">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                promptForDomainAndEmail<span class="signature">(xConfig)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Prompts the user for the domain and email if they are not already set in the configuration.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>xConfig</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Object</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The user configuration object.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_promptForDomainAndEmail.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_promptForDomainAndEmail.js.html">modules/utils/promptForDomainAndEmail.js</a>, <a href="modules_utils_promptForDomainAndEmail.js.html#line5">line 5</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="retrieveSubdomainsTable">
+        <a class="href-link" href="#retrieveSubdomainsTable">#</a>
+        
+        <span class="code-name">
+            
+                retrieveSubdomainsTable<span class="signature">(domain)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Retrieves and displays the subdomains table for a given domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The parent domain to list subdomains for.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_domainsOptions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_domainsOptions.js.html">modules/NetGetX/Domains/domainsOptions.js</a>, <a href="modules_NetGetX_Domains_domainsOptions.js.html#line15">line 15</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="tryElevatedPrivileges">
+        <a class="href-link" href="#tryElevatedPrivileges">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+        
+        <span class="code-name">
+            
+                tryElevatedPrivileges<span class="signature">(command, manualInstructions)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Tries to execute a command with elevated privileges.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>command</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Command to execute with elevated privileges.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>manualInstructions</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Instructions for manual permission resolution.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_utils_handlePermissions.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_utils_handlePermissions.js.html">modules/utils/handlePermissions.js</a>, <a href="modules_utils_handlePermissions.js.html#line69">line 69</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

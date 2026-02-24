@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetGet Documentation src/modules/NetGetX/Domains/SSL/selfSigned/ssl.cli.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">NetGet</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/all.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-GETDirs.html">GETDirs</a></li><li><a href="module-NetGetX.html">NetGetX</a></li><li><a href="module-NginxPaths.html">NginxPaths</a></li><li><a href="module-Srvrs_CLI.html">Srvrs_CLI</a></li><li><a href="module-Utils.html">Utils</a></li><li><a href="module-addNewDomain.html">addNewDomain</a></li><li><a href="module-addSubdomain.html">addSubdomain</a></li><li><a href="module-advanceSettings.html">advanceSettings</a></li><li><a href="module-displayDomains.html">displayDomains</a></li><li><a href="module-domainsMenu.html">domainsMenu</a></li><li><a href="module-domainsTable.html">domainsTable</a></li><li><a href="module-editOrDeleteDomain.html">editOrDeleteDomain</a></li><li><a href="module-handleErrors.html">handleErrors</a></li><li><a href="module-handlePermissions.html">handlePermissions</a></li><li><a href="module-handlePermissionsForEnsureDir.html">handlePermissionsForEnsureDir</a></li><li><a href="module-ipUtils.html">ipUtils</a></li><li><a href="module-logAllDomainsTable.html">logAllDomainsTable</a></li><li><a href="module-logDomainInfo.html">logDomainInfo</a></li><li><a href="module-pathUtils.html">pathUtils</a></li><li><a href="module-promptForDomainAndEmail.html">promptForDomainAndEmail</a></li><li><a href="module-serverBlockConfigOptions.html">serverBlockConfigOptions</a></li><li><a href="module-setDefaultServerBlock.html">setDefaultServerBlock</a></li><li><a href="module-updateNginxConfig.html">updateNginxConfig</a></li><li><a href="module-verifyServerBlock.html">verifyServerBlock</a></li><li><a href="module-viewNginxConfig.html">viewNginxConfig</a></li></ul><h3>Classes</h3><ul><li><a href="NetGet.html">NetGet</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAndInstallCertbot">checkAndInstallCertbot</a></li><li><a href="global.html#checkCertbotNginxPlugin">checkCertbotNginxPlugin</a></li><li><a href="global.html#checkCertificates">checkCertificates</a></li><li><a href="global.html#checkPermissions">checkPermissions</a></li><li><a href="global.html#checkSelfSignedCertificates">checkSelfSignedCertificates</a></li><li><a href="global.html#checkWildcardCertificate">checkWildcardCertificate</a></li><li><a href="global.html#createNginxConfig">createNginxConfig</a></li><li><a href="global.html#displayCurrentSSLConfiguration">displayCurrentSSLConfiguration</a></li><li><a href="global.html#domainSSLConfiguration">domainSSLConfiguration</a></li><li><a href="global.html#ensureDirectoryExists">ensureDirectoryExists</a></li><li><a href="global.html#execShellCommand">execShellCommand</a></li><li><a href="global.html#generateSelfSignedCert">generateSelfSignedCert</a></li><li><a href="global.html#getState">getState</a></li><li><a href="global.html#initializeDirectories">initializeDirectories</a></li><li><a href="global.html#initializeState">initializeState</a></li><li><a href="global.html#installCertbot">installCertbot</a></li><li><a href="global.html#installCertbotNginxPlugin">installCertbotNginxPlugin</a></li><li><a href="global.html#isOpenSSLInstalled">isOpenSSLInstalled</a></li><li><a href="global.html#issueCertificateForDomain">issueCertificateForDomain</a></li><li><a href="global.html#letsEncryptMethod">letsEncryptMethod</a></li><li><a href="global.html#mainServerMenu">mainServerMenu</a></li><li><a href="global.html#obtainSSLCertificates">obtainSSLCertificates</a></li><li><a href="global.html#renewSSLCertificate">renewSSLCertificate</a></li><li><a href="global.html#scanAndLogCertificates">scanAndLogCertificates</a></li><li><a href="global.html#updateState">updateState</a></li><li><a href="global.html#verifyDNSRecord">verifyDNSRecord</a></li><li><a href="global.html#verifySSLCertificate">verifySSLCertificate</a></li><li><a href="global.html#waitForDNSPropagation">waitForDNSPropagation</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>src/modules/NetGetX/Domains/SSL/selfSigned/ssl.cli.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import inquirer from 'inquirer';
+import chalk from 'chalk';
+import fs from 'fs';
+import { loadOrCreateXConfig, saveXConfig } from '../../../config/xConfig.js';
+import checkAndInstallCertbot from '../Certbot/checkAndInstallCertbot.js';
+import { 
+    verifySSLCertificate, 
+    renewSSLCertificate, 
+    obtainSSLCertificates,
+    checkCertificates 
+} from '../SSLCertificates.js';
+import printCertbotLogs from '../Certbot/certbot.js';
+import { storeConfigInDB } from '../../../../../sqlite/utils_sqlite3.js';
+
+/**
+ * Display the current SSL Configuration for a domain
+ * @param {Object} domainConfig - The domain configuration object
+ * @param {string} domain - The domain name
+ * @returns {void}
+ */
+const displayCurrentSSLConfiguration = (domainConfig, domain) => {
+    console.log('\nCurrent SSL Configuration:');
+    console.log(`
+███████ ███████ ██ .domain: ${chalk.green(domain)}  
+██      ██      ██ .email: ${chalk.green(domainConfig.email)} 
+███████ ███████ ██ .enforceHttps: ${chalk.green(domainConfig.enforceHttps)}
+     ██      ██ ██ .SSLCertificatesPath: ${chalk.green(domainConfig.SSLCertificatesPath)}
+███████ ███████ ███████ .SSLCertificatesPath: ${chalk.green(domainConfig.SSLCertificatesPath)}
+.SSL Verification: ${chalk.green("Good/Bad")}`);
+};
+
+/**
+ * Check if a wildcard certificate exists for a domain
+ * @param {string} domain - The domain name
+ * @returns {string} - The path to the wildcard certificate if it exists
+ */
+const checkWildcardCertificate = (domain) => {
+    const rootDomain = domain.split('.').slice(1).join('.');
+    const wildcardDomain = `*.${rootDomain}`;
+    const certPath = `/etc/letsencrypt/live/${wildcardDomain}/fullchain.pem`;
+    return fs.existsSync(certPath) ? certPath : null;
+};
+
+/**
+ * Domain SSL Configuration Menu
+ * @param {string} domain - The domain name
+ * @returns {void}
+ */
+const domainSSLConfiguration = async (domain) => {
+    try {
+        // Check and install Certbot before proceeding with SSL Configuration
+        const certbotInstalled = await checkAndInstallCertbot();
+        if (!certbotInstalled) {
+            console.log(chalk.red('Certbot installation failed. Cannot proceed with SSL configuration.'));
+            return;
+        }
+
+        const xConfig = await loadOrCreateXConfig();
+        const domainConfig = xConfig.domains[domain];
+
+        if (!domainConfig) {
+            console.log(chalk.red(`Domain ${domain} configuration not found.`));
+            return;
+        }
+
+        // Check if a wildcard certificate exists for the parent domain
+        const wildcardCertPath = checkWildcardCertificate(domain);
+
+        if (wildcardCertPath) {
+            const { useWildcard } = await inquirer.prompt([
+                {
+                    type: 'confirm',
+                    name: 'useWildcard',
+                    message: `A wildcard certificate for ${wildcardCertPath} was found. Do you want to use this wildcard certificate for ${domain}?`,
+                    default: true
+                }
+            ]);
+
+            if (useWildcard) {
+                domainConfig.SSLCertificatesPath = wildcardCertPath;
+                domainConfig.SSLCertificateKeyPath = wildcardCertPath.replace('fullchain.pem', 'privkey.pem');
+                const xConfig = await loadOrCreateXConfig();
+                xConfig.domains[domain] = domainConfig;
+                await saveXConfig({ domains: xConfig.domains });
+                console.log(chalk.green(`Applied wildcard certificate from ${wildcardCertPath} to ${domain}.`));
+            } else {
+                console.log(chalk.yellow(`Proceeding to issue a new certificate for ${domain}.`));
+                await issueCertificateForDomain(domain, domainConfig);
+            }
+        } else {
+            await issueCertificateForDomain(domain, domainConfig);
+        }
+
+        // After an action, redisplay the menu
+        await displayCurrentSSLConfiguration(domain);
+    } catch (error) {
+        console.error(chalk.red('An error occurred in the SSL Configuration Menu:', error.message));
+    }
+};
+
+/**
+ * Issue SSL Certificates for a domain
+ * @param {string} domain - The domain name
+ * @param {Object} domainConfig - The domain configuration object
+ * @returns {void}
+ */   
+const issueCertificateForDomain = async (domain, domainConfig) => {
+    const certificatesIssued = await checkCertificates(domain);
+
+    if (certificatesIssued) {
+        if (!domainConfig.SSLCertificatesPath || !domainConfig.SSLCertificateKeyPath) {
+            domainConfig.SSLCertificateName = `${domain}`;
+            domainConfig.SSLCertificatesPath = `/etc/letsencrypt/live/${domain}/fullchain.pem`;
+            domainConfig.SSLCertificateKeyPath = `/etc/letsencrypt/live/${domain}/privkey.pem`;
+            domainConfig.SSLCertificateSqlitePath = `/etc/letsencrypt/archive/${domain}/fullchain1.pem`;
+            domainConfig.SSLCertificateKeySqlitePath = `/etc/letsencrypt/archive/${domain}/privkey1.pem`;   
+            const xConfig = await loadOrCreateXConfig();
+            xConfig.domains[domain] = domainConfig;
+            await saveXConfig({ domains: xConfig.domains });
+            await storeConfigInDB(domain, 'letsencrypt', domainConfig.SSLCertificateSqlitePath, domainConfig.SSLCertificateKeySqlitePath, domainConfig.target, domainConfig.type, domainConfig.projectPath);
+        }
+
+        displayCurrentSSLConfiguration(domainConfig, domain);
+
+        const options = [
+            { name: 'Verify SSL Certificate', value: 'verifyCertificate' },
+            { name: 'Renew SSL Certificate', value: 'renewCertificate' },
+            { name: 'View Certbot Logs', value: 'viewLogs' },
+            { name: 'Back to Domains Menu', value: 'back' },
+            { name: 'Exit', value: 'exit' }
+        ];
+
+        const answer = await inquirer.prompt([
+            {
+                type: 'list',
+                name: 'action',
+                message: 'Select an SSL Configuration option:',
+                choices: options
+            }
+        ]);
+
+        switch (answer.action) {
+            case 'verifyCertificate':
+                await verifySSLCertificate(domain);
+                break;
+            case 'renewCertificate':
+                await renewSSLCertificate(domain);
+                break;
+            case 'viewLogs':
+                await printCertbotLogs();
+                break;
+            case 'editSSLMethod':
+                await saveXConfig({ domain, sslMode: null });
+                console.log(chalk.green('SSL Configuration method has been reset.'));
+                break;
+            case 'back':
+                return;
+            case 'exit':
+                console.log(chalk.blue('Exiting NetGet...'));
+                process.exit(); 
+            default:
+                console.log(chalk.red('Invalid selection. Please try again.'));
+        }
+    } else {
+        console.log(chalk.yellow(`No certificates found for ${domain}.`));
+        const { issueCertificates } = await inquirer.prompt([
+            {
+                type: 'confirm',
+                name: 'issueCertificates',
+                message: `No certificates found for ${domain}. Would you like to issue certificates?`,
+                default: true
+            }
+        ]);
+
+        if (issueCertificates) {
+            await obtainSSLCertificates(domain, domainConfig.email);
+            domainConfig.SSLCertificatesPath = `/etc/letsencrypt/live/${domain}/fullchain.pem`;
+            domainConfig.SSLCertificateKeyPath = `/etc/letsencrypt/live/${domain}/privkey.pem`;
+            domainConfig.SSLCertificateSqlitePath = `/etc/letsencrypt/archive/${domain}/fullchain1.pem`;
+            domainConfig.SSLCertificateKeySqlitePath = `/etc/letsencrypt/archive/${domain}/privkey1.pem`; 
+            const xConfig = await loadOrCreateXConfig();
+            xConfig.domains[domain] = domainConfig;
+            await saveXConfig({ domains: xConfig.domains });
+            await storeConfigInDB(domain, 'letsencrypt', domainConfig.SSLCertificateSqlitePath, domainConfig.SSLCertificateKeySqlitePath, domainConfig.target, domainConfig.type, domainConfig.projectPath);
+        }
+    }
+};
+
+export default domainSSLConfiguration;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

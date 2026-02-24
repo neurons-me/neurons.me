@@ -1,6 +1,7 @@
 [submodule "this/.me"]
 	path = this/.me
 	url = https://github.com/neurons-me/.me.git
+
 [submodule "this/GUI"]
 	path = this/GUI
 	url = https://github.com/neurons-me/GUI.git
@@ -12,3 +13,8 @@
 [submodule "core/cleaker"]
 	path = core/cleaker
 	url = https://github.com/neurons-me/cleaker.git
+
+
+[submodule "core/netget"]
+	path = core/netget
+	url = https://github.com/neurons-me/netget.git

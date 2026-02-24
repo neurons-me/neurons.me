@@ -1,0 +1,3368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  ...
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetGet Documentation SSL</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">NetGet</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://docs.neurons.me/all.this/"
+                        >
+                            All.This
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://neurons.me"
+                        >
+                            Neurons.me
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/neurons-me/all.this"
+                        >
+                            Github
+                        </a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-NetGetX.html">NetGetX</a></li><li><a href="module-PortManagement.html">PortManagement</a></li><li><a href="module-Srvrs_CLI.html">Srvrs_CLI</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-NetGetX.Config.html">Config</a></li><li><a href="module-NetGetX.Domains.html">Domains</a></li><li><a href="module-NetGetX.NginxConfiguration.html">NginxConfiguration</a></li><li><a href="module-NetGetX.OpenResty.html">OpenResty</a></li><li><a href="module-NetGetX.SSL.html">SSL</a></li><li><a href="module-NetGetX.Utils.html">Utils</a></li></ul><h3>Classes</h3><ul><li><a href="NetGet.html">NetGet</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkAndSetFilePermissions">checkAndSetFilePermissions</a></li><li><a href="global.html#checkPermissions">checkPermissions</a></li><li><a href="global.html#displayManualInstructions">displayManualInstructions</a></li><li><a href="global.html#domainsTable">domainsTable</a></li><li><a href="global.html#ensureDirectoryExists">ensureDirectoryExists</a></li><li><a href="global.html#execShellCommand">execShellCommand</a></li><li><a href="global.html#getDirectoryPaths">getDirectoryPaths</a></li><li><a href="global.html#getDomainsFromDB">getDomainsFromDB</a></li><li><a href="global.html#getLocalIP">getLocalIP</a></li><li><a href="global.html#getPublicIP">getPublicIP</a></li><li><a href="global.html#getState">getState</a></li><li><a href="global.html#handlePermission">handlePermission</a></li><li><a href="global.html#handlePermissionErrorForEnsureDir">handlePermissionErrorForEnsureDir</a></li><li><a href="global.html#initializeDirectories">initializeDirectories</a></li><li><a href="global.html#initializeState">initializeState</a></li><li><a href="global.html#pathExists">pathExists</a></li><li><a href="global.html#promptForDomainAndEmail">promptForDomainAndEmail</a></li><li><a href="global.html#retrieveSubdomainsTable">retrieveSubdomainsTable</a></li><li><a href="global.html#tryElevatedPrivileges">tryElevatedPrivileges</a></li><li><a href="global.html#updateState">updateState</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Namespace</p>
+                    <h1>SSL</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-NetGetX.html">NetGetX</a>.</span>SSL</h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_netget_MainMenu.cli.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_netget_MainMenu.cli.js.html">modules/netget_MainMenu.cli.js</a>, <a href="modules_netget_MainMenu.cli.js.html#line34">line 34</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".checkCertbotNginxPlugin">
+        <a class="href-link" href="#.checkCertbotNginxPlugin">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                checkCertbotNginxPlugin<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Check if Certbot NGINX plugin is installed, and install it if necessary.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html">modules/NetGetX/Domains/SSL/Certbot/checkAndInstallCertbot.js</a>, <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html#line48">line 48</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if Certbot NGINX plugin is installed, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".checkCertificates">
+        <a class="href-link" href="#.checkCertificates">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                checkCertificates<span class="signature">(domain)</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Check if certificates are issued for the domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain to check.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html">modules/NetGetX/Domains/SSL/SSLCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html#line179">line 179</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if certificates are issued, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".checkSelfSignedCertificates">
+        <a class="href-link" href="#.checkSelfSignedCertificates">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                checkSelfSignedCertificates<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if self-signed certificates already exist.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html">modules/NetGetX/Domains/SSL/selfSignedCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html#line45">line 45</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>- Resolves to true if both key and certificate exist, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".checkWildcardCertificate">
+        <a class="href-link" href="#.checkWildcardCertificate">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                checkWildcardCertificate<span class="signature">(domain)</span><span class="type-signature"> &rarr; {string}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Check if a wildcard certificate exists for a domain
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain name</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html">modules/NetGetX/Domains/SSL/selfSigned/ssl.cli.js</a>, <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html#line40">line 40</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>- The path to the wildcard certificate if it exists</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">string</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".displayCurrentSSLConfiguration">
+        <a class="href-link" href="#.displayCurrentSSLConfiguration">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                displayCurrentSSLConfiguration<span class="signature">(domainConfig, domain)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Display the current SSL Configuration for a domain
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domainConfig</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Object</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain configuration object</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain name</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html">modules/NetGetX/Domains/SSL/selfSigned/ssl.cli.js</a>, <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html#line23">line 23</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".domainSSLConfiguration">
+        <a class="href-link" href="#.domainSSLConfiguration">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                domainSSLConfiguration<span class="signature">(domain)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Domain SSL Configuration Menu
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain name</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html">modules/NetGetX/Domains/SSL/selfSigned/ssl.cli.js</a>, <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html#line53">line 53</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".execShellCommand">
+        <a class="href-link" href="#.execShellCommand">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                execShellCommand<span class="signature">(cmd)</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Executes a shell command and returns a promise.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>cmd</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The command to execute.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html">modules/NetGetX/Domains/SSL/selfSignedCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html#line123">line 123</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".generateSelfSignedCert">
+        <a class="href-link" href="#.generateSelfSignedCert">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                generateSelfSignedCert<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Generates a self-signed certificate if it doesn't already exist.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html">modules/NetGetX/Domains/SSL/selfSignedCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html#line61">line 61</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".installCertbot">
+        <a class="href-link" href="#.installCertbot">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                installCertbot<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Install Certbot.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html">modules/NetGetX/Domains/SSL/Certbot/checkAndInstallCertbot.js</a>, <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html#line29">line 29</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if Certbot is installed successfully, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".installCertbotNginxPlugin">
+        <a class="href-link" href="#.installCertbotNginxPlugin">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                installCertbotNginxPlugin<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Install Certbot NGINX plugin.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html">modules/NetGetX/Domains/SSL/Certbot/checkAndInstallCertbot.js</a>, <a href="modules_NetGetX_Domains_SSL_Certbot_checkAndInstallCertbot.js.html#line67">line 67</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if Certbot NGINX plugin is installed successfully, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".isOpenSSLInstalled">
+        <a class="href-link" href="#.isOpenSSLInstalled">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                isOpenSSLInstalled<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if OpenSSL is installed.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html">modules/NetGetX/Domains/SSL/selfSignedCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_selfSignedCertificates.js.html#line28">line 28</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>- Resolves to true if OpenSSL is installed, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".issueCertificateForDomain">
+        <a class="href-link" href="#.issueCertificateForDomain">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                issueCertificateForDomain<span class="signature">(domain, domainConfig)</span><span class="type-signature"> &rarr; {void}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Issue SSL Certificates for a domain
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain name</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domainConfig</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Object</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain configuration object</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html">modules/NetGetX/Domains/SSL/selfSigned/ssl.cli.js</a>, <a href="modules_NetGetX_Domains_SSL_selfSigned_ssl.cli.js.html#line117">line 117</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">void</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".letsEncryptMethod">
+        <a class="href-link" href="#.letsEncryptMethod">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                letsEncryptMethod<span class="signature">(xConfiguration)</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Setup LetsEncrypt SSL for domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>xConfiguration</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Object</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">X-Configuration object.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_letsEncrypt_letsEncrypt.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_letsEncrypt_letsEncrypt.js.html">modules/NetGetX/Domains/SSL/letsEncrypt/letsEncrypt.js</a>, <a href="modules_NetGetX_Domains_SSL_letsEncrypt_letsEncrypt.js.html#line42">line 42</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving when SSL setup is complete.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".obtainSSLCertificates">
+        <a class="href-link" href="#.obtainSSLCertificates">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                obtainSSLCertificates<span class="signature">(domain, email)</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Obtains SSL certificates for the domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain to obtain SSL certificates for.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>email</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The email address to use for obtaining SSL certificates.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html">modules/NetGetX/Domains/SSL/SSLCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html#line42">line 42</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if SSL certificates are obtained successfully, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".renewSSLCertificate">
+        <a class="href-link" href="#.renewSSLCertificate">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                renewSSLCertificate<span class="signature">(domain)</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Renews the SSL certificate for the domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain to renew SSL certificate for.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html">modules/NetGetX/Domains/SSL/SSLCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html#line157">line 157</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if SSL certificate is renewed successfully, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".scanAndLogCertificates">
+        <a class="href-link" href="#.scanAndLogCertificates">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                scanAndLogCertificates<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;void>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Scans and logs information about all issued certificates.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html">modules/NetGetX/Domains/SSL/SSLCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html#line204">line 204</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;void></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".verifyDNSRecord">
+        <a class="href-link" href="#.verifyDNSRecord">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                verifyDNSRecord<span class="signature">(domain, value)</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Verifies the DNS record for the domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain to verify.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>value</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The value of the DNS record.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html">modules/NetGetX/Domains/SSL/SSLCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html#line15">line 15</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if DNS record is verified, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".verifySSLCertificate">
+        <a class="href-link" href="#.verifySSLCertificate">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                verifySSLCertificate<span class="signature">(domain)</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Verifies the SSL certificate for the domain.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain to verify.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html">modules/NetGetX/Domains/SSL/SSLCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html#line135">line 135</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if SSL certificate is verified, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".waitForDNSPropagation">
+        <a class="href-link" href="#.waitForDNSPropagation">#</a>
+        
+            
+                <span class='tag'>async</span>
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                waitForDNSPropagation<span class="signature">(domain, value)</span><span class="type-signature"> &rarr; {Promise.&lt;boolean>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Waits for DNS propagation of the DNS record.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>domain</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The domain to wait for DNS propagation.</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>value</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The value of the DNS record.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html" class="button">View Source</a>
+            <span>
+                <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html">modules/NetGetX/Domains/SSL/SSLCertificates.js</a>, <a href="modules_NetGetX_Domains_SSL_SSLCertificates.js.html#line115">line 115</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>Promise resolving to true if DNS record is propagated, false otherwise.</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;boolean></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+<style>
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+
+<a href="http://neurons.me" target="_blank">By neurons.me</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>
