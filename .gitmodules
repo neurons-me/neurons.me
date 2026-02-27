@@ -18,3 +18,8 @@
 [submodule "core/netget"]
 	path = core/netget
 	url = https://github.com/neurons-me/netget.git
+
+[submodule "core/PixelGrid.me"]
+	path = core/PixelGrid.me
+	url = https://github.com/neurons-me/PixelGrid.me.git
+
