@@ -14,7 +14,6 @@
 	path = core/cleaker
 	url = https://github.com/neurons-me/cleaker.git
 
-
 [submodule "core/netget"]
 	path = core/netget
 	url = https://github.com/neurons-me/netget.git
@@ -23,3 +22,10 @@
 	path = core/PixelGrid.me
 	url = https://github.com/neurons-me/PixelGrid.me.git
 
+[submodule "core/monad.ai"]
+	path = core/monad.ai
+	url = https://github.com/neurons-me/monad.ai.git
+
+[submodule "all.this"]
+	path = all.this
+	url = https://github.com/neurons-me/all.this.git
