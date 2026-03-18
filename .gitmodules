@@ -6,6 +6,10 @@
 	path = this/GUI
 	url = https://github.com/neurons-me/GUI.git
 
+[submodule "this/DOM"]
+	path = this/DOM
+	url = https://github.com/neurons-me/this.DOM.git
+
 [submodule "domains/neurons-me.github.io"]
 	path = domains/neurons-me.github.io
 	url = https://github.com/neurons-me/neurons-me.github.io.git
