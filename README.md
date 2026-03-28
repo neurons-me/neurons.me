@@ -7,8 +7,6 @@
 
 ###### Go Algorithmic.
 
-
-
 **MIT License**
 Copyright (c) 2025
 [neurons.me](https://neurons.me)
