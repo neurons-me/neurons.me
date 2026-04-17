@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/this/GUI", "destination": "/this/GUI/index.html" },
+    { "source": "/this/GUI/**", "destination": "/this/GUI/index.html" }
+  ]
+}

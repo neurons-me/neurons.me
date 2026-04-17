@@ -1,35 +1,27 @@
 [submodule "this/.me"]
 	path = this/.me
 	url = https://github.com/neurons-me/.me.git
-
 [submodule "this/GUI"]
 	path = this/GUI
 	url = https://github.com/neurons-me/GUI.git
-
 [submodule "this/DOM"]
 	path = this/DOM
 	url = https://github.com/neurons-me/this.DOM.git
-
 [submodule "domains/neurons-me.github.io"]
 	path = domains/neurons-me.github.io
 	url = https://github.com/neurons-me/neurons-me.github.io.git
-
 [submodule "core/cleaker"]
 	path = core/cleaker
 	url = https://github.com/neurons-me/cleaker.git
-
 [submodule "core/netget"]
 	path = core/netget
 	url = https://github.com/neurons-me/netget.git
-
 [submodule "core/PixelGrid.me"]
 	path = core/PixelGrid.me
 	url = https://github.com/neurons-me/PixelGrid.me.git
-
 [submodule "core/monad.ai"]
 	path = core/monad.ai
 	url = https://github.com/neurons-me/monad.ai.git
-
 [submodule "all.this"]
 	path = all.this
 	url = https://github.com/neurons-me/all.this.git
