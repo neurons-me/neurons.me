@@ -1,5 +1,4 @@
 # Namespace Resolution Protocol v0.1
-
 **neurons.me / suiGn**
 **Status:** Draft — Working Document
 **License:** CC0 1.0 Universal — Public Domain
@@ -7,7 +6,6 @@
 ---
 
 ## Preamble
-
 This document specifies the **Namespace Resolution Protocol (NRP)** for the `me://` URI scheme.
 
 The NRP defines how a `me://` URI is resolved from a symbolic address into a concrete semantic value, across a distributed mesh of surfaces — without a central registry, without a central server, and without requiring persistent connectivity.

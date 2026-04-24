@@ -1,9 +1,5 @@
-# MIT License
-
-**Copyright (c) 2025**
-
-**[neurons.me](https://neurons.me)** 
-
+# MIT License (Repository Scope)
+Copyright (c) 2025 suiGn - Abella.e 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -14,7 +10,7 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "**AS IS**", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -22,4 +18,30 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+---
+
+# Repository License Notice
+**Copyright (c) 2025**
 **suiGn - Abella.e**
+**[neurons.me](https://neurons.me)** 
+
+This repository is a monorepo containing multiple independent projects.
+Each subproject may have its own license, which applies only to that specific directory.
+Unless otherwise specified, the root of this repository is licensed under the MIT License.
+
+## Scope Clarification
+This repository is a monorepo containing multiple independent projects.
+- This license applies ONLY to files located in the root of this repository and any directories that do not contain their own LICENSE file.
+- Submodules and subdirectories that include their own LICENSE are governed exclusively by their respective licenses.
+
+## Subproject Licenses
+Please refer to the LICENSE file within each subdirectory for details.
+[submodule "this/.me"]
+[submodule "this/GUI"]
+[submodule "this/DOM"]
+[submodule "domains/neurons-me.github.io"]
+[submodule "core/cleaker"]
+[submodule "core/netget"]
+[submodule "core/PixelGrid.me"]
+[submodule "core/monad.ai"]
+[submodule "all.this"]

@@ -4,9 +4,7 @@
 </picture>
 
 # .me  
-
 **Your personal semantic kernel.**
-
 Define who you are, what you have, and how everything connects — once.   Then use it across all your apps, sites, and surfaces.
 
 ```bash
@@ -38,7 +36,6 @@ console.log(me("friends[age > 18].name")); // → { ana: "Ana" }
 ```
 
 ### What is .me really?
-
 - It's an **infinite semantic tree** where you define the rules.
 - You can create data, relationships, formulas, and secrets.
 - Everything is **reactive**: change one thing and everything that depends on it updates automatically.
@@ -46,7 +43,6 @@ console.log(me("friends[age > 18].name")); // → { ana: "Ana" }
 - You can export your entire state and restore it anywhere (laptop, server, another country) and it works exactly the same.
 
 ### What people love
-
 - **No schemas** — If you can think of a path (me.house.kitchen.lights), it exists.
 - **Real privacy** — Not a policy, it's built into the structure.
 - **Define once** — Create logic once and reuse it across many interfaces.
@@ -55,7 +51,6 @@ console.log(me("friends[age > 18].name")); // → { ana: "Ana" }
 ---
 
 # ⟁ Infinite Semantic Trees
-
 **.me** supports **infinite** nesting:
 
 ```ts
@@ -67,7 +62,7 @@ me.home.kitchen.lights["="]("avg", "(main.brightness + leds.brightness) / 2"); /
 me("home.kitchen.lights.avg"); // → 60
 ```
 
-```txt
+```bash
 Runtime output (real):
   avg -> 60
 
@@ -126,7 +121,6 @@ me("studio.synth.moog.filter.cutoff"); // → 1200
 ---
 
 ## 𓂀 Secrets: Encrypted Universes
-
 Secrets don't just hide data; they create **Private Sub-Dimensions** in your identity tree.
 
 ```ts
@@ -157,7 +151,6 @@ me("wallet.balance"); // → 500 (Direct path resolution works)
 ```
 
 ###### 𓉔 Recursive Stealth:
-
 **Secrets nest infinitely**. Each `["_"]` creates a deeper, independent cryptographic layer:
 
 ```ts
@@ -169,12 +162,10 @@ me("wallet.hidden.note");// → "Deep dark secret"
 ```
 
 ## 𓉐 The Rules of the Vault:
-
 **Zero-Knowledge Roots:** You can't "list" a secret directory. If you don't know the path, the data doesn't exist for you.
 
 **Path-Based Resolution:** There is no global unlock() call. Security is woven into the Semantic Path.
 **Atomic Encryption:** Every secret branch is a self-contained encrypted universe.
-
 
 - **A secret belongs to a specific position in the identity tree.**
 - Everything under that position becomes encrypted.
@@ -182,7 +173,6 @@ me("wallet.hidden.note");// → "Deep dark secret"
 - Reads are path-based; there is no global `me.secret(...)` unlock call.
 
 ###### Structural view (public vs secret planes)
-
 ```bash
 Public index plane (inspect().index):
   "" -> { __id: "jabellae" }
@@ -201,7 +191,6 @@ Read behavior:
 ---
 
 ## ⟐ Why .me?
-
 - **Infinite Surface:** No schemas. If you think of a path `(me.a.b.c)`, it exists. You **define your universe as you speak.**
 - **Universal Query:** Any string is a query. No SQL, no complex APIs. Just paths and brackets `[]`.
 - **Fractal Privacy:** Security isn't a "plugin." It's woven into the tree. You can drop a `Secret ["_"]` anywhere, and that branch becomes a private universe.
@@ -211,7 +200,6 @@ Read behavior:
 ---
 
 ## 𓆣 Explain Derivations
-
 Use `me.explain(path)` to audit how a computed value was produced.
 
 ```ts
@@ -257,15 +245,15 @@ For runtime snapshots/debug:
 
 ```ts
 me.inspect(); // memory + index + scopes
-me.exportSnapshot();  // full portable state (Phase 7B)
+const snapshot = me.exportSnapshot(); // full portable state (Phase 7B)
+const restored = new ME();
+restored.hydrate(snapshot);
 ```
 
 # 𓃭 The Engine: Why it’s so fast?𓃭
-
 While traditional databases get bogged down in heavy scans and slow joins, the **.me Kernel** doesn't "search" for data—it navigates a **Semantic Algebra.**
 
 ## 𓎛 Incremental Intelligence (Phase 8) 
-
 Unlike standard reactive frameworks that re-render everything, **.me** uses an **Inverted Dependency Index.**
 When you define a formula (=), the Kernel maps the relationship.
 On mutation, only the affected nodes wake up.
@@ -274,33 +262,27 @@ On mutation, only the affected nodes wake up.
  is the specific dependency chain, not the size of the tree).
 
  # 𓂀 The .me Behavioral Contract
-
 The `.me` kernel is governed by a rigorous 9-phase behavioral contract, validated through **Hermetic RPN Evaluation** and **Inverted Dependency Indexing**.
 
 ### 𓎛 Core Identity & Privacy
-
 *   **𓂋 Phase 0 | Identity + Secret Scope**: Validates `@` identity claims and `_` stealth roots. Secret branches resolve to `undefined` at the root while remaining readable at the leaf via derived keys.
 *   **𓆣 Phase 8 | Stealth Masking & Explainability**: The `me.explain(path)` method provides a full audit trace. Inputs from secret scopes are flagged as `origin: "stealth"` and masked (`●●●●`), ensuring **Zero-Knowledge-ish observability**.
 
 ### 𓏏 Structural Intelligence
-
 *   **𓐍 Phase 1 | Navigation**: Supports nested `[]` selectors and infinite proxy-chaining.
 *   **𓌳 Phase 2 | [i] Broadcast**: One-to-many formula application using `=` syntax.
 *   **𓍝 Phase 3 | Logical Filters**: Declarative selection using predicates (e.g., `trucks[efficiency < 4.5]`).
 *   **𓎼 Phase 4 | Deterministic Slicing**: Range `[a..b]` and sparse `[[a,c]]` multi-selection.
 
 ### ⚙ Reactive Runtime
-
 *   **Phase 6 | Contract Integrity**: Deterministic arithmetic crossing public and secret boundaries.
 *   **Phase 8 | Incremental Recompute**: Dependency tracking (Ref → Targets). Mutating a leaf triggers targeted re-evaluation in **~50ms**, bypassing global recompute costs.
 
 ### Sovereignty & Portability
-
 *   **Phase 7A | Temporal Replay**: Full state reconstruction via cryptographic thought-log replay.
 *   **Phase 7B | Atomic Snapshots**: Bit-level portability of the entire kernel (memory + secrets + noise seeds + encrypted branches).
 
 # 𓁟 Hermetic Sandbox (Phase C)
-
 Security isn't a "check"; it's a grammar.
 We replaced `eval()` with a custom **Shunting-yard + RPN evaluator.**
 The Kernel is physically incapable of executing arbitrary code. **It only resolves math and logic** over its own validated paths.
@@ -308,20 +290,13 @@ The Kernel is physically incapable of executing arbitrary code. **It only resolv
 ### Fractal Stealth (Phase 0 & 6)
 
 ###### Privacy is woven into the tree's geometry.
-
 **Stealth Roots:** Secret scopes `("_")` are invisible to standard lookups.
 **Deterministic Integrity:** Calculations can cross from public to secret scopes **(Phase 6)** without ever exposing the sensitive keys in the audit trail (me.explain).
 **Zero-Latency Portability** **(Phase 7A/B)**
 
 ###### 𓂀𓈖𓂀 ⟐ Your identity is Deterministic ⟐ 𓂀𓈖𓂀
-
 By exporting **"Memory"** or **"Snapshots"**, you can teleport your entire state between a **MacBook Air** in **Veracruz** and a high-end server in **London.**
 The behavior is identical, bit-by-bit, because the logic is part of the state.
-
----
-
-<a href="https://www.neurons.me" target="_blank">
-<img src="https://res.cloudinary.com/dkwnxf6gm/image/upload/v1760901388/bc75d34cf31ad2217a3cc607f41b884c022e8a7e0dc022e2678bbba5bac1cd59-removebg-preview-removebg-preview_w6c3il.png" style="zoom:21%;" /></a>
 
 
 ##### License
