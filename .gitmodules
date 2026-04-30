@@ -25,3 +25,6 @@
 [submodule "all.this"]
 	path = all.this
 	url = https://github.com/neurons-me/all.this.git
+[submodule "this/.wallet"]
+	path = this/.wallet
+	url = https://github.com/neurons-me/.wallet.git

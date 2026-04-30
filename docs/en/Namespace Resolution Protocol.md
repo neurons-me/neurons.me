@@ -1,6 +1,6 @@
-# Namespace Resolution Protocol v0.1
+# Namespace Resolution Protocol v0.1.2
 **neurons.me / suiGn**
-**Status:** Draft — Working Document
+**Status:** First Stable Working Document
 **License:** CC0 1.0 Universal — Public Domain
 
 ---
@@ -28,6 +28,8 @@ me://jabellae.cleaker.me[surface:iphone]/wallet.balance
 
 The NRP specifies the topological layer. The semantic layer is already specified by `this.me`.
 
+*Meaning lives in the namespace. Execution lives in the mesh.*
+
 ---
 
 ## 1. Definitions
@@ -35,6 +37,8 @@ The NRP specifies the topological layer. The semantic layer is already specified
 **Namespace** — A named semantic domain. Represented as a human-readable label (e.g., `jabellae.cleaker.me`). A namespace is owned by whoever holds its root key material. There is no central authority that grants or revokes a namespace.
 
 **Surface** — A physical or logical runtime context that can hold a `.me` kernel instance and participate in the mesh. Examples: an iPhone app, a MacBook daemon, a server process, a browser tab. A surface has a name within a namespace.
+
+Surfaces are **not** namespaces. A surface is a runtime execution context **within** a namespace — a place where the namespace can run code and access resources. An iPhone, a MacBook, and a server process are all surfaces of the **same** namespace, not separate namespaces. The namespace holds the meaning; the surface lends the resources.
 
 **Surface identity** — The cryptographic identifier of a surface within a namespace:
 
@@ -202,6 +206,14 @@ me.system.consumed_nonces[nonce].at(timestamp);
 ## 5. Selector Resolution Rules
 
 The `me://` URI selector determines how topological resolution proceeds.
+
+### 5.0 No selector — namespace-global resolution
+
+```
+me://jabellae.cleaker.me/wallet.balance
+```
+
+When no selector is present, resolution is **namespace-global**. The daemon decides which surface to consult. The caller experiences this as "find anywhere in my namespace" — equivalent to a filesystem search across all mounted volumes. This is distinct from `[]` (explicit fanout): no selector means the namespace resolves intelligently; `[]` means the caller explicitly requests all surfaces.
 
 ### 5.1 `[current]` — current surface
 
@@ -414,6 +426,10 @@ These are the invariants that any implementation must preserve. They are not imp
 
 **7. Offline-capable.** Local resolution (`[current]` or no selector) works with no network access. The protocol degrades gracefully: offline surfaces are skipped in broadcast, missing surfaces return `NRP_ERROR_SURFACE_UNREACHABLE`. The local kernel is never blocked by network state.
 
+**8. The namespace is a semantic filesystem.** The namespace is not a server, not an endpoint, not an account. It is the living, distributed, encrypted graph of who you are, what you have, and what the mesh can execute or deliver on your behalf. Paths in the namespace behave like paths in a filesystem — with mounts, secret scopes, executable handlers, and remote resources. The mesh is the transport layer that makes this filesystem accessible from anywhere, like NFS or IPFS — but semantic, encrypted, and under sovereign control.
+
+*Meaning lives in the namespace. Execution lives in the mesh.*
+
 ---
 
 ## Appendix A — Formal Grammar (ABNF, from URI scheme v1)
@@ -437,7 +453,48 @@ secret-key   = 1*( ALPHA / DIGIT / "-" / "_" )
 
 ---
 
-## Appendix B — Open Questions for v0.2
+## Appendix B — Current HTTP Binding (Compatibility Layer)
+
+The canonical resource grammar remains the one defined in this document:
+
+```text
+me://namespace[selector]/path
+```
+
+The current `monad.ai` server already supports a primary HTTP binding in which the namespace is resolved from the `Host` header and the daemon remains local/offline-first as a transport surface.
+
+### Primary HTTP binding
+
+- `GET /<path>` with `Host: <namespace>` — read from the namespace resolved from `Host`
+- `POST /` with `Host: <namespace>` and `{"operation":"write", "expression":"...", "value":..., "identityHash":"..."}` — write into the namespace resolved from `Host`
+- `POST /` with `Host: <namespace>` and `{"operation":"claim", "secret":"...", "proof":{...}}` — perform a claim against the namespace resolved from `Host`
+- `POST /` with `Host: <namespace>` and `{"operation":"open", "secret":"...", "identityHash":"..."}` — reopen the namespace resolved from `Host`
+
+In this binding, the transport endpoint may still be local, such as `http://localhost:8161`, while the semantic namespace is selected through `Host`. This is consistent with a local/offline-first daemon acting as the material surface for a semantic namespace.
+
+### Current implementation notes
+
+- Read uses the path in the URL, while write currently uses the `expression` field in the request body. These refer to the same semantic selector, but they are serialized differently in each direction in the current implementation.
+- Write authorization on a claimed namespace is enforced. In the current implementation, a write is accepted when the request body `identityHash` matches the stored claim identity hash, or when the request carries a valid signature verifiable against the claim's stored public key.
+- Claim currently accepts a hybrid proof model: `proof` (Ed25519 signature) proves identity, while `secret` still seeds the unlock state. Open currently remains anchored to `identityHash`, while `secret` acts as an unlock key for reopening the namespace state.
+
+### Deprecated / compatibility surfaces
+
+The current server implementation may also expose overlapping compatibility routes in addition to the primary binding. In particular, the current `monad.ai` server exposes:
+
+- `POST /claims` — a profile-oriented claim bootstrap endpoint. In the current implementation it expects `namespace`, `secret`, `identityHash`, and profile fields such as `username`, `name`, `email`, and `phone`.
+- `POST /claims/open` — an HTTP endpoint for reopening a claimed namespace and recovering its state. In the current implementation it expects `namespace`, `secret`, and `identityHash`.
+- `POST /me/kernel:claim/<namespace>` and `POST /me/kernel:open/<namespace>` — bridge routes that expose kernel command targets over HTTP.
+
+These routes are part of the current implementation surface and compatibility layer. They do not redefine the canonical `me://` resource grammar described by the NRP, and they should not be treated as the primary expression of the protocol.
+
+These bindings also only partially overlap. They may validate different request bodies, return different status codes, or expose different behavior during bootstrap and testing. They should not be treated as equivalent transport expressions of the protocol.
+
+A future transport binding document may replace or consolidate these routes, but any such wire-level evolution must preserve the canonical resource identity described here.
+
+---
+
+## Appendix C — Open Questions for v0.2
 
 These are the questions this document intentionally leaves open, in priority order:
 
@@ -457,4 +514,4 @@ These are the questions this document intentionally leaves open, in priority ord
 
 **∴ Witness our seal**
 **suiGn / neurons.me**
-**v0.1 — Draft**
+**v0.1.2**
