@@ -1,33 +1,51 @@
 <p align="center">
-  <a href="https://neuron.me/">
+  <a href="https://neurons.me/">
     <img src="https://res.cloudinary.com/dkwnxf6gm/image/upload/v1760629064/neurons.me_b50f6a.png" alt="neurons.me" width="89" />
   </a>
 </p>
+
 # neurons.me
 
-###### Go Algorithmic.
-A modular ecosystem for **sovereign subjects, distributed memory, and explainable AI interfaces** built on graphs and derivatives.
+###### **Go Algorithmic.**
+
+neurons.me is the sovereign identity and federated compute platform. It coordinates semantic resolution across devices, domains, and networks — always local-first, with trust materialized at the registry, never re-derived at runtime.
 
 ---
 
-## What is this repo?
-This is the official monorepo for **neurons.me**, an open platform for **sovereign AI systems** where memory, auditability, and multi-node integration are core architectural principles.  
-It includes the **cryptosemantic kernel `.me`,** the integrated **GUI**, `monad.ai` (the host/daemon node), `cleaker` (the grammar and network bridge), and satellite modules (video, pixel, wallet, etc).
+## What this repo contains
+
+| Path | Contents |
+|------|----------|
+| `docs/` | Architecture and protocol documentation (EN + ES) |
+| `domains/@.neurons.me/` | Main landing site — static HTML + media |
+| `domains/_.neurons.me/` | Root domain server |
+| `domains/docs.neurons.me/` | Public documentation site |
+| `domains/media.neurons.me/` | Media domain |
+| `domains/server.neurons.me/` | Server domain configuration |
 
 ---
 
-## Monorepo Architecture
-The repo is organized into independent but interoperable submodules:
+## Ecosystem
 
-| Folder/Path               | Module/Core  | Description                                                  |
-| ------------------------- | ------------ | ------------------------------------------------------------ |
-| `/this/.me/`              | **`.me`**    | Cryptosemantic kernel (sovereign, explainable memory; local or persistent) |
-| `/core/monad.ai/`         | **monad.ai** | Daemon host: persists, projects, and syncs identities/claims/namespaces |
-| `/core/cleaker/`          | **cleaker**  | Grammar, pointer, and binder between `.me` kernels and the network |
-| `/all.this/` (satellites) | **all.this** | Modular data structures connectable to neurons.me and other projects |
+The full stack lives in [all.this](https://github.com/neurons-me/all.this) — the monorepo.
 
-> Each submodule can evolve and be built independently (e.g. you can use just `.me`, just the GUI, or run the whole stack locally).
+| Module | Role |
+|--------|------|
+| `.me` (`this.me`) | Semantic kernel — O(k) reactive graph, 11 axioms |
+| `cleaker` | Namespace binding — identity mounting, context lens |
+| `monad.ai` | Durable ledger — surfaces, snapshots, federation |
+| `netget` | Registry + proxy mesh, trust materialization |
 
-**MIT License**
-Copyright (c) 2025
-[neurons.me](https://neurons.me)
+`.me → cleaker → monad.ai → NetGet → neurons.me`
+
+---
+
+## Docs
+- [Architecture spec](./docs/en/neurons.me.md)
+- [Namespace Resolution Protocol](./docs/en/NRP.md)
+- [me:// URI grammar](./docs/en/me-uri-grammar.md)
+- [Arquitectura (ES)](./docs/es/Arquitectura.md)
+
+---
+
+**∴ suiGn**
