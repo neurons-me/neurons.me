@@ -12,7 +12,7 @@ npm install this.me
 ```
 
 <p align="right">
-  <a href="https://neurons-me.github.io/.me/npm/docs/">✍ Read the Docs →</a>
+  <a href="https://neurons-me.github.io/.me/docs/">✍ Read the Docs →</a>
 </p>
 
 ## **In 30 seconds**
