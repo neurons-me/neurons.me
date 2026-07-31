@@ -42,7 +42,7 @@ console.log(me("friends[age > 18].name")); // → { ana: "Ana" }
 - Your secrets are **structural** — not just hidden, but entire private universes that nobody can enumerate.
 - You can export your entire state and restore it anywhere (laptop, server, another country) and it works exactly the same.
 
-### What people love
+### What .me loves S2 S2 S2
 - **No schemas** — If you can think of a path (me.house.kitchen.lights), it exists.
 - **Real privacy** — Not a policy, it's built into the structure.
 - **Define once** — Create logic once and reuse it across many interfaces.
